@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Liste</h1>
+    <ul>
+        <li>Milk</li>
+        <li>Cheese
+            <ul>
+                <li>Blue cheese</li>
+                <li>Feta</li>
+            </ul>
+        </li>
+        <li>Paolo</li>
+    </ul>
+
+    <ul type="square">
+        <li>Milk</li>
+        <li>Cheese
+            <ul>
+                <li>Blue cheese</li>
+                <li>Feta</li>
+            </ul>
+        </li>
+        <li>Paolo</li>
+    </ul>
+
+    <ul>
+        <li>first item</li>
+        <li>
+            second item
+            <!-- Look, the closing </li> tag is not placed here! -->
+            <ul>
+                <li>second item first subitem</li>
+                <li>
+                    second item second subitem
+                    <!-- Same for the second nested unordered list! -->
+                    <ul>
+                        <li>second item second subitem first sub-subitem</li>
+                        <li>second item second subitem second sub-subitem</li>
+                        <li>second item second subitem third sub-subitem</li>
+                    </ul>
+                </li>
+                <!-- Closing </li> tag for the li that
+                        contains the third unordered list -->
+                <li>second item third subitem</li>
+            </ul>
+            <!-- Here is the closing </li> tag -->
+        </li>
+        <li>third item</li>
+    </ul>
+
+    <h2>Lista ordinata</h2>
+    <ol type="A">
+        <li>Mix flour, baking powder, sugar, and salt.</li>
+        <li>In another bowl, mix eggs, milk, and oil.</li>
+        <li>Stir both mixtures together.</li>
+        <li>Fill muffin tray 3/4 full.</li>
+        <li>Bake for 20 minutes.</li>
+      </ol> 
+
+    <ol reversed>
+        <li>Mix flour, baking powder, sugar, and salt.</li>
+        <li>In another bowl, mix eggs, milk, and oil.</li>
+        <li>Stir both mixtures together.</li>
+        <li>Fill muffin tray 3/4 full.</li>
+        <li>Bake for 20 minutes.</li>
+      </ol> 
+
+      <ol type="i">
+        <li>Introduction</li>
+        <li>List of Grievances</li>
+        <li>Conclusion</li>
+      </ol>
+
+      <ol>
+        <li>first item</li>
+        <li>
+          second item
+          <!-- closing </li> tag is not here! -->
+          <ol>
+            <li>second item first subitem</li>
+            <li>second item second subitem</li>
+            <li>second item third subitem</li>
+          </ol>
+        </li>
+        <!-- Here's the closing </li> tag -->
+        <li>third item</li>
+      </ol>
+
+</body>
+
+</html>
