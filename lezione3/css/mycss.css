@@ -1,0 +1,30 @@
+span.ingredient {
+  color: #f00;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+li span {
+  background: gold;
+}
+
+.warning {
+  border: 10px ridge #f00;
+  background-color: #ff0;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.warning img {
+  width: 60%;
+}
+
+.warning p {
+  font: small-caps bold 1.2rem sans-serif;
+  text-align: left;
+}
+
+p {
+    font-style: oblique;
+}
