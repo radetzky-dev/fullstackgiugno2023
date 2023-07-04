@@ -39,19 +39,58 @@
             <input type="email" name="email" id="email" required>
         </div>
 
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+        </div>
+
+        <div>
+            <label for="pass">Password (8 characters minimum):</label>
+            <input type="password" id="pass" name="password" minlength="8" maxlength="10" required>
+        </div>
+
+        <fieldset>
+            <legend>Select a maintenance drone:</legend>
+
+            <div>
+                <input type="radio" id="huey" name="drone" value="huey" checked>
+                <label for="huey">Huey</label>
+            </div>
+
+            <div>
+                <input type="radio" id="dewey" name="drone" value="dewey">
+                <label for="dewey">Dewey</label>
+            </div>
+
+            <div>
+                <input type="radio" id="louie" name="drone" value="louie">
+                <label for="louie">Louie</label>
+            </div>
+        </fieldset>
+
+        <p>Audio settings:</p>
+
+        <div>
+            <input type="range" id="volume" name="volume" min="0" max="11">
+            <label for="volume">Volume</label>
+        </div>
+
+        <div>
+            <input type="range" id="cowbell" name="cowbell" min="0" max="100" value="90" step="10">
+            <label for="cowbell">Cowbell</label>
+        </div>
+
+        <input type="submit" value="Sign in">
+
         <label for="start">Start date:</label>
-
         <input type="date" id="start" name="trip-start" min="2018-01-01" max="2023-12-31">
-
-
         <label for="meeting-time">Choose a time for your appointment:</label>
-
-
 
         <div class="form-example">
             <input type="submit" value="Subscribe!">
         </div>
     </form>
+    <hr>
 
     <form method="post" action="">
         <label for="email">Enter your globex.com email:</label>
@@ -68,12 +107,10 @@
 
         <fieldset>
             <legend>Choose your monster's features:</legend>
-
             <div>
                 <input type="checkbox" id="scales" name="scales">
                 <label for="scales">Scales</label>
             </div>
-
             <div>
                 <input type="checkbox" id="horns" name="horns" checked>
                 <label for="horns">Horns</label>
@@ -85,6 +122,18 @@
             <label><input type="radio" name="radiomio" value="yes" /> Yes</label>
             <label><input type="radio" name="radiomio" value="no" /> No</label>
         </fieldset>
+
+        <label for="avatar">Choose a profile picture:</label>
+
+        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+
+        <label>Qui c'è un campo nascosto</label>
+        <input type="hidden" id="userId" name="userId" value="14" />
+
+        <label for="tentacles">Number of tentacles (10-100):</label>
+
+        <input type="number" id="tentacles" name="tentacles" min="10" max="100">
+
         <div class="form-example">
             <input type="submit" value="Subscribe!">
         </div>
@@ -113,7 +162,6 @@
     </form>
 
     <input class="favorite styled" type="button" value="Add to favorites">
-
     <input type="button" value="Click Me" />
 
 </body>
