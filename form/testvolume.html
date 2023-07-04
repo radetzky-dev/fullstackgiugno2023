@@ -13,6 +13,11 @@
     <p>Value: <output id="value"></output></p>
 
 
+    <textarea>
+        dhjdaj Maria ciao Paolo e un'altra parola Acaso sono un test DI scrittura e di LEttutra e te
+    </textarea>
+    <button type="button">Trova maiuscole</button>
+
     <script>
         const value = document.querySelector("#value");
         const input = document.querySelector("#pi_input");
@@ -20,6 +25,13 @@
         input.addEventListener("input", (event) => {
             value.textContent = event.target.value;
         });
+
+
+        const testo = "dhjdaj Maria ciao Paolo e un'altra parola Acaso sono un test DI scrittura e di LEttutra e testo ChatGPT";
+        const regex = /\b[A-Z]\w*\b/g;
+        const paroleMaiuscole = testo.match(regex);
+
+        console.log(paroleMaiuscole);
     </script>
 </body>
 
