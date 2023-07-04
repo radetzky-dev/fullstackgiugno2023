@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-<h1>The picture element</h1>
+  <h1>The picture element</h1>
 
-<p>Senza formattazione (quella del browser)</p>
+  <p>Senza formattazione (quella del browser)</p>
 
-<p style="font-size:5vw;">Resize the browser window to load different images.</p>
+  <p style="font-size:5vw;">Resize the browser window to load different images.</p>
 
-<picture>
-  <source media="(min-width:650px)" srcset="assets/img_pink_flowers.jpg">
-  <source media="(min-width:465px)" srcset="assets/img_white_flower.jpg">
-  <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
-</picture>
+  <picture>
+    <source media="(min-width:650px)" srcset="assets/img_pink_flowers.jpg">
+    <source media="(min-width:465px)" srcset="assets/img_white_flower.jpg">
+    <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+  </picture>
+
+  <canvas width=200" height="200">
+    An alternative text describing what your canvas displays.
+  </canvas>
+
+  <script>
+    const canvas = document.querySelector("canvas");
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "blue";
+    // Add a rectangle at (10, 10) with size 100x100 pixels
+    ctx.fillRect(10, 10, 150, 105);
+  </script>
 
 </body>
+
 </html>
