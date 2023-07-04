@@ -91,6 +91,38 @@
         </div>
     </form>
     <hr>
+    <form>
+        <div class="controls">
+
+            <label for="id">User ID:</label>
+            <input type="text" id="id" name="id">
+
+            <label for="id">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="phone">Enter your phone number:</label>
+
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+            <small>Format: 123-456-7890</small>
+
+            <label for="appt">Choose a time for your meeting:</label>
+
+            <input type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+
+            <small>Office hours are 9am to 6pm</small>
+
+            <label for="url">Enter an https:// URL:</label>
+
+            <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30"
+                required>
+
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+
+        </div>
+    </form>
+    <hr>
 
     <form method="post" action="">
         <label for="email">Enter your globex.com email:</label>
