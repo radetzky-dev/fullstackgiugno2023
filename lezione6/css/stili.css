@@ -24,3 +24,15 @@ p {
 .unica {
     color: green;
 }
+
+[name]
+{
+    color:chartreuse;
+}
+
+[name="sottotesto"]
+{
+    color:blue;
+    font-weight: bolder;
+}
+
