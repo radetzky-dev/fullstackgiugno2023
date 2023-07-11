@@ -92,14 +92,22 @@ li li {
   color: blue;
 }
 
-p.testo_del_sito span{
-    color: green;
+p.testo_del_sito span {
+  color: green;
 }
 
 span {
-    background-color: aqua;
+  background-color: aqua;
+}
+
+div > span > span > p {
+  background-color: violet;
+}
+div ~ p {
+    background-color: greenyellow;
   }
-  
-  div > span > span > p {
-    background-color: yellow;
+
+
+p ~ span {
+    color: red;
   }

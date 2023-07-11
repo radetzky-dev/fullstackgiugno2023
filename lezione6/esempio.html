@@ -28,11 +28,15 @@
                 <div id="unico">
                     Prova di testo usato una sola volta come ID e nel css lo trovo con #
                 </div>
+
+                <h3>Intervallo</h3>
+
+                <p>colorati di giallo</p>
             </article>
 
             <article>
                 <h3 name="sottotitolo">sottotitolo</h3>
-                <p id="unico">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos itaque temporibus
+                <p id="unico">QUESTO ipsum dolor sit amet, consectetur adipisicing elit. Eos itaque temporibus
                     accusantium
                     maiores earum laborum voluptatem nostrum <span class="unica">una classe che può essere ripetuta e
                         che
@@ -105,7 +109,25 @@
         </div>
         <span>Span #3, not in the div at all.</span>
 
-
+        <hr>
+        <article>
+            <span>This is not red because it appears before any paragraph.</span>
+            <p>Here is a paragraph.</p>
+            <code>Here is some code.</code>
+            <span>
+              This span is red because it appears after the paragraph, even though there
+              are other nodes in between
+            </span>
+            <p>Whatever it may be, keep smiling.</p>
+            <h1>Dream big</h1>
+            <span>
+              Doesn't matter how many or what kind of nodes are in between, all spans from
+              the same parent after a paragraph are red.
+            </span>
+          </article>
+          <span>
+            This span is not red because it doesn't share a parent with a paragraph
+          </span>
 
     </main>
 
