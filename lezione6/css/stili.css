@@ -122,3 +122,9 @@ img {
 li:first-of-type + li {
     color: red;
   }
+
+  div.test > div + button
+  {
+    background-color: blue;
+    color:white;
+  }
