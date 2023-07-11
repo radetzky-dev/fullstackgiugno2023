@@ -104,10 +104,9 @@ div > span > span > p {
   background-color: violet;
 }
 div ~ p {
-    background-color: greenyellow;
-  }
-
+  background-color: greenyellow;
+}
 
 p ~ span {
-    color: red;
-  }
+  color: red;
+}
