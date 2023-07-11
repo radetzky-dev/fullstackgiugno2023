@@ -5,3 +5,22 @@
     margin: 5px;
     padding: 5px;
 }
+
+p {
+    margin: 10px;
+    font-size: 14px;   
+}
+
+.testo_del_sito {
+    margin: 15px;
+    font-size: 1.2vw;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#unico {
+    color: red;
+}
+
+.unica {
+    color: green;
+}
