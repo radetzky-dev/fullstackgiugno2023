@@ -110,3 +110,15 @@ div ~ p {
 p ~ span {
   color: red;
 }
+
+img + p {
+    font-weight: bold;
+    background-color: orange;
+  }
+img {
+    float: right;
+}
+
+li:first-of-type + li {
+    color: red;
+  }
