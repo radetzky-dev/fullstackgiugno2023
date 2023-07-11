@@ -13,6 +13,11 @@ main {
     background-color: white;
 }
 
+article {
+    margin-top: 10px;
+    border-bottom: dotted black 1px;
+}
+
 div {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-color: chartreuse;
