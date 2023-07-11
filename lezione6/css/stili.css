@@ -1,69 +1,69 @@
 * {
-    color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.5vw;
-    margin: 5px;
-    padding: 5px;
+  color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.5vw;
+  margin: 5px;
+  padding: 5px;
+}
+
+div {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 p {
-    margin: 10px;
-    font-size: 14px;   
+  margin: 10px;
+  font-size: 14px;
 }
 
 .testo_del_sito {
-    margin: 15px;
-    font-size: 1.2vw;
-    font-family: 'Times New Roman', Times, serif;
+  margin: 15px;
+  font-size: 1.2vw;
+  font-family: "Times New Roman", Times, serif;
 }
 
 #unico {
-    color: red;
+  color: red;
 }
 
 .unica {
-    color: green;
+  color: green;
 }
 
-[name]
-{
-    color:chartreuse;
+[name] {
+  color: chartreuse;
 }
 
-[name="sottotesto"]
-{
-    color:rebeccapurple;
-    font-weight: bolder;
+[name="sottotesto"] {
+  color: rebeccapurple;
+  font-weight: bolder;
 }
 
-[name *="testo"]
-{
-    color:blue;
-    font-weight: bolder;
+[name*="testo"] {
+  color: blue;
+  font-weight: bolder;
 }
 
-[name ^="sott"], [name $="testo"]
-{
-    color:grey;
-    font-weight: bolder;
+[name^="sott"],
+[name$="testo"] {
+  color: grey;
+  font-weight: bolder;
 }
-
-
 
 a[title] {
-    color: yellowgreen;
-    text-decoration: none;
-    font-size: 3vw;
-  }
-
-div.grassetto, p.grassetto {
-    font-weight: 800;
-    color:blue
+  color: yellowgreen;
+  text-decoration: none;
+  font-size: 2vw;
 }
 
-a.mylink[href*="amazon.it"]
-{
-    font-weight: 400;
-    color: red;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+div.grassetto,
+p.grassetta,
+a.america {
+  font-weight: 700;
+  color: blue;
+}
+
+a.mylink[href*="amazon.it"] {
+  font-weight: 600;
+  color: red;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
