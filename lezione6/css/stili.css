@@ -42,20 +42,28 @@ p {
     font-weight: bolder;
 }
 
-[name ^="sott"]
+[name ^="sott"], [name $="testo"]
 {
     color:grey;
     font-weight: bolder;
 }
 
-[name $="testo"]
-{
-    color:burlywood;
-    font-weight: bolder;
-}
+
 
 a[title] {
     color: yellowgreen;
     text-decoration: none;
     font-size: 3vw;
   }
+
+div.grassetto, p.grassetto {
+    font-weight: 800;
+    color:blue
+}
+
+a.mylink[href*="amazon.it"]
+{
+    font-weight: 400;
+    color: red;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
