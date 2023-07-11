@@ -5,12 +5,20 @@
   margin: 5px;
   padding: 5px;
 }
+body {
+    background-image: url("../assets/crema.svg");
+}
+
+main {
+    background-color: white;
+}
 
 div {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: chartreuse;
 }
 
-p {
+p,h1,h3 {
   margin: 10px;
   font-size: 14px;
 }
