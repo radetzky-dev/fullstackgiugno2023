@@ -6,24 +6,26 @@
   padding: 5px;
 }
 body {
-    background-image: url("../assets/crema.svg");
+  background-image: url("../assets/crema.svg");
 }
 
 main {
-    background-color: white;
+  background-color: white;
 }
 
 article {
-    margin-top: 10px;
-    border-bottom: dotted black 1px;
+  margin-top: 10px;
+  border-bottom: dotted black 1px;
 }
 
 div {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: chartreuse;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: chartreuse;
 }
 
-p,h1,h3 {
+p,
+h1,
+h3 {
   margin: 10px;
   font-size: 14px;
 }
@@ -80,3 +82,24 @@ a.mylink[href*="amazon.it"] {
   color: red;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
+
+li {
+  list-style-type: disc;
+}
+
+li li {
+  list-style-type: circle;
+  color: blue;
+}
+
+p.testo_del_sito span{
+    color: green;
+}
+
+span {
+    background-color: aqua;
+  }
+  
+  div > span > span > p {
+    background-color: yellow;
+  }
