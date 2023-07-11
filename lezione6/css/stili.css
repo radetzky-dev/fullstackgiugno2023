@@ -32,7 +32,29 @@ p {
 
 [name="sottotesto"]
 {
+    color:rebeccapurple;
+    font-weight: bolder;
+}
+
+[name *="testo"]
+{
     color:blue;
     font-weight: bolder;
 }
 
+[name ^="sott"]
+{
+    color:grey;
+    font-weight: bolder;
+}
+
+[name $="testo"]
+{
+    color:burlywood;
+    font-weight: bolder;
+}
+
+a[title] {
+    color: yellowgreen;
+    text-decoration: none;
+  }
