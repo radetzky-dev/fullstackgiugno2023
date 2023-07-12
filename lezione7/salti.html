@@ -15,25 +15,24 @@
         }
 
         li:nth-child(even)
-
         /*Tutti i pari*/
             {
             font-weight: bold;
         }
 
         li:nth-child(3n)
-
         /*multipli 3*/
             {
             font-variant: small-caps;
         }
-
+        
         /*
         :nth-child(3n+4)
 - Avanza di 3 step, con offset di 4 [(3×0)+4], 7 [(3×1)+4], 10 [(3×2)+4], 13 [(3×3)+4], etc.
         */
 
-        li:nth-child(3n+4) {
+        li:nth-child(3n+4)
+        {
             text-decoration: underline;
         }
 
@@ -51,8 +50,9 @@ n=1
 n=2
 -2 x 2 = -4 + 4 = 0
         */
-        li:nth-child(-2n+4) {
-            color: chocolate;
+        li:nth-child(-2n+4)
+        {
+            color:chocolate;
         }
     </style>
 </head>
