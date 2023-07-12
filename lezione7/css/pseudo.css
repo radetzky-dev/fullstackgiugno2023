@@ -106,4 +106,23 @@ dd:last-of-type {
     border: 2px solid green;
 }
 
+p::first-letter {
+    text-transform: capitalize;
+}
+
+p::first-line {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+q::before {
+    content: "«QUOTA ";
+    color: blue;
+    font-size: larger;
+  }
+  
+  q::after {
+    content: " FINE QUOta»";
+    color: red;
+    font-size: larger;
+  }
 
