@@ -13,13 +13,54 @@
         li:nth-child(18) {
             color: gray;
         }
+
+        li:nth-child(even)
+
+        /*Tutti i pari*/
+            {
+            font-weight: bold;
+        }
+
+        li:nth-child(3n)
+
+        /*multipli 3*/
+            {
+            font-variant: small-caps;
+        }
+
+        /*
+        :nth-child(3n+4)
+- Avanza di 3 step, con offset di 4 [(3×0)+4], 7 [(3×1)+4], 10 [(3×2)+4], 13 [(3×3)+4], etc.
+        */
+
+        li:nth-child(3n+4) {
+            text-decoration: underline;
+        }
+
+        /*
+         :nth-child(-n+3)
+- Rappresenta i primi 3 elementi (fino a 0). [=-0+3, -1+3, -2+3]
+
+- Rappresenta 2 e 4  li:nth-child(-2n+4)
+n=0
+-2 x 0 =0 +4 = 4
+
+n=1
+-2 x 1 = -2 +4 = 2
+
+n=2
+-2 x 2 = -4 + 4 = 0
+        */
+        li:nth-child(-2n+4) {
+            color: chocolate;
+        }
     </style>
 </head>
 
 <body>
 
-    <h1>Lista con 18 elementi</h1>
-    <ul>
+    <h1>Lista con 21 elementi</h1>
+    <ol>
         <li>Bill Russell</li>
         <li>Sam Jones</li>
         <li>Tom Heinsohn</li>
@@ -38,7 +79,10 @@
         <li>Jim Loscutoff</li>
         <li>Frank Ramsey</li>
         <li>Robert Horry</li>
-    </ul>
+        <li>K. C. Jones</li>
+        <li>Satch Sanders</li>
+        <li>K. C. Jones</li>
+    </ol>
 
 </body>
 
