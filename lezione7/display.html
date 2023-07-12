@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        #example1 {
+            display: block;
+            border: 1px solid;
+        }
+
+        #example2 {
+            display: inline-block;
+            border: 1px solid;
+        }
+
+
+        #example3 {
+            display: grid;
+        }
+
+        #example4 {
+            display: flex;
+        }
+
+        .child {
+            display: inline-block;
+            padding: 0.5em 1em;
+            background-color: #ccf;
+            border: 1px solid #ababab;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="example1">
+        <div class="child">One</div>
+        <div class="child">Two</div>
+        <div class="child">Three</div>
+    </div>
+
+    <div id="example2">
+        <div class="child">One</div>
+        <div class="child">Two</div>
+        <div class="child">Three</div>
+    </div>
+
+    <div id="example3">
+        <div class="child">One</div>
+        <div class="child">Two</div>
+        <div class="child">Three</div>
+    </div>
+
+
+    <div id="example4">
+        <div class="child">One</div>
+        <div class="child">Two</div>
+        <div class="child">Three</div>
+        <div class="child">Three</div>
+        <div class="child">Three</div>
+    </div>
+
+</body>
+
+</html>

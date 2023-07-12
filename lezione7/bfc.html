@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            height: 150px;
+        }
+
+        .box {
+            background-color: rgb(224, 206, 247);
+            border: 5px solid rebeccapurple;
+        }
+
+        .box[style] {
+            background-color: aliceblue;
+            border: 5px solid steelblue;
+        }
+
+        .float {
+            float: left;
+            width: 200px;
+            height: 140px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        #test {  /* diventa root e si muove in base a quello */
+            border: 1px solid red;
+            position:relative; 
+            top:10px;
+            left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="box">
+            <div class="float">I am a floated box!
+                <div id="test">Altro elemento da root</div>
+            </div>
+            <p>I am content inside the container.</p>
+            <div id="test">Altro elemento da root</div>
+        </div>
+    </section>
+    <br><br>
+    <section>
+        <div class="box" style="overflow:auto">
+            <div class="float">I am a floated box!
+                <div id="test">Altro elemento da root</div>
+            </div>
+            <div class="float">I am a floated box!
+                <div id="test">Altro elemento da root</div>
+            </div>
+            <p>I am content inside the <code>overflow:auto</code> container.</p>
+            <div id="test">Altro elemento da root</div>
+        </div>
+    </section>
+    <br><br>
+    <br><br>
+    <br><br>
+    <section>
+        <div class="box" style="display:flow-root">
+            <div class="float">I am a floated box!
+                <div id="test">Altro elemento da root</div>
+            </div>
+            <div class="float">I am a floated box!
+                <div id="test">Altro elemento da root</div>
+            </div>
+            <p>I am content inside the <code>display:flow-root</code> container.</p>
+            <div id="test">Altro elemento da root</div>
+        </div>
+    </section>
+
+
+
+    
+</body>
+
+</html>
