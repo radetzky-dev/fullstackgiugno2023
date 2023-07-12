@@ -1,4 +1,109 @@
 button:hover {
-    color: white;
-    background-color: brown;
-  }
+  color: white;
+  background-color: brown;
+}
+
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+
+
+input:disabled,select:disabled {
+    background-color: dimgrey;
+    color: linen;
+    opacity: 1;
+}
+
+input:checked {
+  outline: 3px solid deeppink;
+}
+
+.req {
+    color: red;
+}
+
+*:required {
+    background-color: red;
+}
+
+
+a:link {
+    color: forestgreen;
+    text-decoration-color: hotpink;
+}
+
+a:visited {
+    color: black;
+    text-decoration-color: hotpink;
+}
+
+input:focus {
+    background-color: lightblue;
+}
+
+select:focus {
+    background-color: ivory;
+}
+
+
+ol {
+    list-style-type: upper-alpha;
+    color: darkblue;
+}
+
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:is(ol, ul, menu:unsupported) :is(ol, ul) {
+    color: green;
+}
+
+:is(ol, ul) :is(ol, ul) ol {
+    list-style-type: lower-greek;
+    color: chocolate;
+}
+
+p:not(.irrelevant) {
+    font-weight: bold;
+}
+
+p > strong,
+p > b.important {
+    color: crimson;
+}
+
+p > :not(strong, b.important) {
+    color: darkmagenta;
+}
+
+h1,
+h2 {
+  margin: 0 0 1rem 0;
+}
+
+h1:has(+ h2) {
+  margin: 0 0 2em 0;
+  color:blue
+}
+
+li:first-child {
+    border: 2px solid orange;
+}
+
+li:last-child {
+    border: 2px solid red;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 3px;
+}
+
+dd:last-of-type {
+    border: 2px solid green;
+}
+
+
