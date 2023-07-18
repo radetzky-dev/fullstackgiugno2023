@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .box {
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    background: red;
+    color: white;
+  }
+  
+  #two {
+    position: relative;
+    top: 20px;
+    left: 30px;
+    width: 120px;
+    background: blue;
+  }
