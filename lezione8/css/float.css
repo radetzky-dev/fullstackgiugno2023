@@ -1,0 +1,53 @@
+/* 1 STEP : box sizing and lobotimized owl */
+
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body * + * {
+  margin-top: 1.5em;
+}
+
+/* 2 STEP : generic styling rules */
+
+body {
+  background: #bbb;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+  margin-bottom: 1.5em;
+}
+
+header,
+footer {
+  background-color: #1da3eb;
+  padding: 1.5em;
+  color: #fff;
+}
+
+main {
+  background: #fff;
+  padding: 0 1.5em 1.5em 1.5em;
+}
+
+header,
+footer,
+main {
+  border-radius: 10px;
+}
+
+article {
+  background-color: #dedede;
+  padding: 1.5em;
+}
+
+article h4 {
+  margin: 0;
+}
