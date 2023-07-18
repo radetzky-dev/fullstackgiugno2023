@@ -63,4 +63,10 @@ article h4 {
   margin: 0 auto;
 }
 
+/* 4 STEP : fixing floating section */
 
+section::after {
+  display: block;
+  content: " ";
+  clear: both;
+}
