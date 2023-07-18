@@ -48,7 +48,8 @@ article {
   background-color: #dedede;
   padding: 1.5em;
   float: left;
-  width: 50%;
+  margin: 0 1.5em 1.5em 0;
+  width: calc(50% - 1.5em);
 }
 
 article h4 {
@@ -69,4 +70,13 @@ section::after {
   display: block;
   content: " ";
   clear: both;
+}
+
+ /* 5 STEP : article margins */
+
+
+/*fixes the margins of the edge children*/
+section {
+    margin-right: -1.5em;
+    margin-bottom: -1.5em;
 }
