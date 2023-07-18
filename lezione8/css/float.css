@@ -18,7 +18,8 @@ body * + * {
 
 body {
   background: #bbb;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 header {
@@ -46,8 +47,20 @@ main {
 article {
   background-color: #dedede;
   padding: 1.5em;
+  float: left;
+  width: 50%;
 }
 
 article h4 {
   margin: 0;
 }
+
+/* 3 STEP : applying float section */
+
+/* double container pattern */
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+
