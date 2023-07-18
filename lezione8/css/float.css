@@ -72,11 +72,23 @@ section::after {
   clear: both;
 }
 
- /* 5 STEP : article margins */
-
+/* 5 STEP : article margins */
 
 /*fixes the margins of the edge children*/
 section {
-    margin-right: -1.5em;
-    margin-bottom: -1.5em;
+  margin-right: -1.5em;
+  margin-bottom: -1.5em;
+}
+
+/* 6 STEP : Fixes collapsing margin of section title */
+
+section::before {
+  display: table;
+  content: " ";
+}
+
+/* 7 STEP : grid row clearfix */
+
+.articles > :nth-child(2n + 1) {
+  clear: left;
 }
