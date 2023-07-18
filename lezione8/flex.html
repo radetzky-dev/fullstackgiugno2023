@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        #flex-container {
+            display: flex;
+            font-family: Consolas, Arial, sans-serif;
+        }
+
+        #flex-container>div {
+            padding: 1rem;
+        }
+
+        #flex-auto {
+            flex: auto;
+            border: 1px solid #f00;
+        }
+
+        #flex-initial {
+            border: 1px solid #000;
+        }
+
+        .box {
+            display: flex;
+            border: 1px solid;
+          }
+
+        div {
+            border: 1px green solid;
+        }
+      
+        .box_reverse {
+            display: flex;
+          flex-direction: row-reverse;
+          }
+
+          .box_wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">
+        <div>One</div>
+        <div>Two</div>
+        <div>Threehfksdjfhsfksh fdsfds fsdf test
+            <br>has
+            <br>extra
+            <br>text
+        </div>
+        <div id="flex-auto">Quattro</div>
+      </div>
+
+    <div id="flex-container">
+        <div id="flex-auto">flex: auto</div>
+        <div id="flex-initial">flex: initial</div>
+    </div>
+
+    <div class="box_reverse">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+      </div>
+
+      <div class="box_wrap">
+        <div>One ccccckj dskjfskjfjksfs sdfdsfj kjsdfsdfdsf UNO sdfksd</div>
+        <div>Two fsdfsd  sdfsdfsdfsdfsdf fsdf sdfdsf sdfdsfsdfdsf </div>
+        <div>Three fsdfsd sdfdsf sdfdsfds TRE sdfds sdfsdf</div>
+      </div>
+
+</body>
+
+</html>
