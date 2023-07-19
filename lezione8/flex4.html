@@ -24,6 +24,8 @@
             font-size: 14px;
             text-align: center;
             position: relative;
+            display: flex;
+            justify-content: space-around;
         }
 
         .flex::after {
@@ -81,6 +83,10 @@
         {
             flex-basis: 200px;
         }
+
+        img {
+            width: 200px;
+        }
     </style>
 </head>
 
@@ -94,8 +100,16 @@
     </ul>
 
     <ul class="container">
-        <li class="flex flex6">6: flex-basis test</li>
+        <li class="flex flex6">
+            <img src="assets/cioccolato.jpg" alt="cioccolato">
+        </li>
     </ul>
+
+    <div class="flex">
+        <img src="assets/cioccolato.jpg" alt="cioccolato">
+        <img src="assets/cioccolato.jpg" alt="cioccolato">
+        <img src="assets/cioccolato.jpg" alt="cioccolato">
+    </div>
 </body>
 
 </html>
