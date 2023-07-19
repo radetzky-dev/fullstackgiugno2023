@@ -45,3 +45,13 @@ body {
     color: white;
     text-decoration: none;
 }
+
+/*2 STEP : apply Flex to site nav */
+
+.site-nav > li:nth-child(1n+2) {
+    margin-left: .5em;
+}
+
+.site-nav > li.nav-right {
+    margin-left: auto;
+}
