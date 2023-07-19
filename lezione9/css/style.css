@@ -92,3 +92,35 @@ main > * + * {
 .column-sidebar > .tile {
     flex: 1;
 }
+
+/* 6 STEP : login tile */
+
+.login-form h3 {
+    margin: 0;
+    font-size: .9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.login-form label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.login-form input[type=text],
+.login-form input[type=password] {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    border: 1px solid #dedede;
+    padding: .5em 1em;
+}
+
+.login-form button {
+    margin-top: 1em;
+    border: 1px solid #cc6b5a;
+    background-color: rgb(215, 241, 183);
+    padding: .5em 1em;
+    cursor: pointer;
+}
