@@ -84,4 +84,11 @@ main > * + * {
 
 .column-sidebar {
     flex: 1;
+    /*5 step */
+    display: flex;
+    flex-direction: column;
+}
+
+.column-sidebar > .tile {
+    flex: 1;
 }
