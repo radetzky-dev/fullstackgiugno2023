@@ -55,3 +55,23 @@ body {
 .site-nav > li.nav-right {
    margin-left: auto; 
 }
+
+/*3 STEP : layout main area */
+
+main {
+    display: flex;
+}
+
+main > * + * {
+    margin-top: 0;
+    margin-left: 1.5em;
+}
+
+.tile {
+    padding: 1.5em;
+    background-color: white;
+}
+
+.tile :first-child {
+    margin-top: 0;
+}
