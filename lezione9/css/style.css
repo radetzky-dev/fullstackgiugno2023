@@ -75,3 +75,13 @@ main > * + * {
 .tile :first-child {
     margin-top: 0;
 }
+
+/*4 STEP : assign flex layout to tiles */
+
+.column-main {
+    flex: 3;
+}
+
+.column-sidebar {
+    flex: 1;
+}
