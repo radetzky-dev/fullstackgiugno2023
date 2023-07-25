@@ -1,10 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esercizio</title>
+    <style>
+        :root {
+            box-sizing: border-box;
+        }
+
+        * ::after,
+        ::before {
+            box-sizing: inherit;
+        }
+
+        body {
+            background-color: #707e9b;
+            font-family: Calibri, sans-serif;
+        }
+
+        .portfolio {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        figure img {
+            max-width: 100%;
+            margin: 0;
+            display: block;
+        }
+
+        figure figcaption {
+            margin: 0;
+            padding: .3em .8em;
+            text-align: right;
+            background-color: rgba(0, 0, 0, .5);
+            color: yellow;
+        }
+
+        figure {
+            display: inline-block;
+            max-width: 300px;
+            margin: 0;
+        }
+
+        @supports (display: grid) {
+            .portfolio {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                grid-auto-rows: 1fr;
+                grid-gap: 1em;
+            }
+
+            .portfolio .featured {
+                grid-row: span 2;
+                grid-column: span 2;
+            }
+
+            /* Grid Dense */
+           .portfolio {
+               grid-auto-flow: dense;
+           }
+
+           /* Filling unwanted space with Flex */
+           figure{
+               display: flex;
+               flex-direction: column;
+               max-width: initial;
+           }
+
+           figure img{
+               flex: 1;
+               object-fit: cover;
+           }
+        }
+    </style>
 </head>
+
 <body>
     <div class="portfolio">
         <figure class="featured">
@@ -36,6 +109,7 @@
             <figcaption>Cheetah</figcaption>
         </figure>
     </div>
-    
+
 </body>
+
 </html>
