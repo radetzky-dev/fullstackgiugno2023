@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewport</title>
+    <style>
+        .title>h1 {
+            color: #399;
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+
+        @media (min-width: 560px) and (max-width: 760px) {
+            .title>h1 {
+                font-size: 2.5rem;
+                text-transform: lowercase;
+                color: blue
+            }
+        }
+
+        /* At the top level of your code */
+        @media screen and (min-width: 600px) {
+            article {
+                padding: 1rem 3rem;
+                border: 1px solid;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        }
+
+        /* Nested within another conditional at-rule */
+        @supports (display: flex) {
+            @media screen and (min-width: 600px) {
+                article {
+                    display: flex;
+                    padding: 5px;
+                    margin : 5px;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <h1>Hello World</h1>
+
+    </div>
+
+    <article>
+        <h2>Titolo articolo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quod accusantium vel minima nulla aliquid tempore eligendi, exercitationem sit adipisci quas, ab error unde quis consequuntur iusto tenetur sequi odio!</p>
+    </article>
+
+</body>
+
+</html>
