@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid area</title>
+    <style>
+        .header {
+            grid-area: hd;
+            border: 1px solid;
+        }
+
+        .footer {
+            grid-area: ft;
+            border: 1px solid;
+        }
+
+        .content {
+            grid-area: main;
+            border: 1px solid;
+        }
+
+        .sidebar {
+            grid-area: sd;
+            border: 1px solid;
+        }
+
+        .wrapper {
+            display: grid;
+            background-color: brown;
+            grid-template-columns: repeat(8, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            grid-template-areas:
+                "hd hd  hd   hd   hd   hd   hd   hd"
+                "sd sd  main main main main main main"
+                "sd sd  ft   ft   ft   ft   ft ft";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas voluptate nisi, maiores minima quaerat ea ipsam, autem quae perferendis sint facere iste, nobis repudiandae. Ducimus officiis placeat tempora cum impedit.</p>
+        </div>
+        <div class="content">Content</div>
+        <div class="footer">Footer</div>
+    </div>
+
+</body>
+
+</html>
