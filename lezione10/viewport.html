@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viewport</title>
     <style>
+        body {
+            color: black;
+        }
+
         .title>h1 {
             color: #399;
             text-transform: uppercase;
@@ -35,8 +39,22 @@
                 article {
                     display: flex;
                     padding: 5px;
-                    margin : 5px;
+                    margin: 5px;
                 }
+            }
+        }
+
+        @media (height > 600px) {
+            body {
+                line-height: 1.4;
+                color: darkblue;
+            }
+        }
+
+        @media (400px <=width <=700px) {
+            body {
+                line-height: 1.2;
+                color: brown;
             }
         }
     </style>
@@ -50,7 +68,9 @@
 
     <article>
         <h2>Titolo articolo</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quod accusantium vel minima nulla aliquid tempore eligendi, exercitationem sit adipisci quas, ab error unde quis consequuntur iusto tenetur sequi odio!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quod accusantium vel minima nulla aliquid
+            tempore eligendi, exercitationem sit adipisci quas, ab error unde quis consequuntur iusto tenetur sequi
+            odio!</p>
     </article>
 
 </body>
