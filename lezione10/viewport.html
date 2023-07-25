@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viewport</title>
     <style>
+        :root {
+            --first-color: #343345;
+            --second-color: #6534;
+        }
+
+        h1 {
+            color: blue;
+            font-size: 6vw;
+        }
+
         body {
             color: black;
         }
@@ -33,6 +43,13 @@
             }
         }
 
+        @media screen and (max-width: calc(600px - 80px)) {
+            p {
+                color: yellow;
+            }
+
+        }
+
         /* Nested within another conditional at-rule */
         @supports (display: flex) {
             @media screen and (min-width: 600px) {
@@ -57,14 +74,53 @@
                 color: brown;
             }
         }
+
+        blockquote {
+            margin: 1em 0;
+        }
+
+        blockquote::after {
+            display: block;
+            content: ' (sorgente: ' attr(cite) ') ';
+            color: hotpink;
+        }
+
+        p:after {
+            display: block;
+            content: ' quello che voglio (citazione)';
+            color: greenyellow;
+        }
+
+        #firstParagraph {
+            background-color: var(--first-color);
+            color: var(--second-color);
+        }
+
+        #secondParagraph {
+            background-color: var(--second-color);
+            color: var(--first-color);
+        }
+
+        #container {
+            --first-color: #290;
+        }
+
+        #thirdParagraph {
+            background-color: var(--first-color);
+            color: var(--second-color);
+        }
     </style>
 </head>
 
 <body>
+    <h1>Prova</h1>
     <div class="title">
         <h1>Hello World</h1>
 
     </div>
+
+    <blockquote cite="https://mozilla.org/en-US/about/">Mozilla makes browsers, apps, code and tools that put people
+        before profit.</blockquote>
 
     <article>
         <h2>Titolo articolo</h2>
@@ -72,6 +128,18 @@
             tempore eligendi, exercitationem sit adipisci quas, ab error unde quis consequuntur iusto tenetur sequi
             odio!</p>
     </article>
+
+    <p id="firstParagraph">
+        This paragraph should have a blue background and yellow text.
+    </p>
+    <p id="secondParagraph">
+        This paragraph should have a yellow background and blue text.
+    </p>
+    <div id="container">
+        <p id="thirdParagraph">
+            This paragraph should have a green background and yellow text.
+        </p>
+    </div>
 
 </body>
 
