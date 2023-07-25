@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media</title>
+    <style>
+        /* Minimum aspect ratio */
+        @media (min-aspect-ratio: 8/5) {
+            div {
+                background: #9af;
+                /* blue */
+            }
+        }
+
+        /* Maximum aspect ratio */
+        @media (max-aspect-ratio: 3/2) {
+            div {
+                background: #9ff;
+                /* cyan */
+            }
+        }
+
+        /* Exact aspect ratio, put it at the bottom to avoid override*/
+        @media (aspect-ratio: 1/1) {
+            div {
+                background: #f9a;
+                /* red */
+            }
+        }
+
+        p {
+            color: black;
+        }
+
+        /* Any color device */
+        @media (color) {
+            p {
+                color: red;
+            }
+        }
+
+        /* Any color device with at least 8 bits per color component */
+        @media (min-color: 8) {
+            p {
+                color: #24ba13;
+            }
+        }
+
+        body {
+            display: flex;
+        }
+
+        div {
+            background: yellow;
+            width: 200px;
+            height: 200px;
+            margin: 0.5rem;
+            padding: 0.5rem;
+        }
+
+        @media (orientation: landscape) {
+            body {
+                flex-direction: row;
+                background-color: #24ba13;
+            }
+        }
+
+        @media (orientation: portrait) {
+            body {
+                flex-direction: column;
+            }
+        }
+
+        :not(.unknown) {
+            color: black;
+        }
+
+        @media (grid: 0) {
+            .unknown {
+                color: lightgray;
+            }
+
+            .bitmap {
+                color: red;
+                text-transform: uppercase;
+            }
+        }
+
+        @media (grid: 1) {
+            .unknown {
+                color: lightgray;
+            }
+
+            .grid {
+                color: black;
+                text-transform: uppercase;
+            }
+        }
+
+
+
+        @media (overflow-block: scroll) {
+            p {
+                color: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="inner">
+        Watch this element as you resize your viewport's width and height.
+    </div>
+
+    <p>
+        This text should be black on non-color devices, red on devices with a low
+        number of colors, and greenish on devices with a high number of colors.
+    </p>
+
+    <div>Box 1</div>
+    <div>Box 2</div>
+    <div>Box 3</div>
+
+    <p class="unknown">I don't know if you're using a grid device. :-(</p>
+    <p class="bitmap">You are using a bitmap device.</p>
+    <p class="grid">You are using a grid device! Neato!</p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis
+        eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in
+        faucibus orci luctus et ultrices posuere cubilia Curae; Nunc velit erat,
+        tempus id rutrum sed, dapibus ut urna. Integer vehicula nibh a justo imperdiet
+        rutrum. Nam faucibus pretium orci imperdiet sollicitudin. Nunc id facilisis
+        dui. Proin elementum et massa et feugiat. Integer rutrum ullamcorper eleifend.
+        Proin sit amet tincidunt risus. Sed nec augue congue eros accumsan tincidunt
+        sed eget ex.
+    </p>
+</body>
+
+</html>
