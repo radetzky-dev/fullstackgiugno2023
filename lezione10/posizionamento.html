@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posizionamento</title>
+</head>
+<style>
+    html {
+        font-family: helvetica, arial, sans-serif;
+        letter-spacing: 1px;
+    }
+
+    article {
+        background-color: red;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 40px;
+        grid-gap: 10px;
+        margin: 20px;
+        width: 300px;
+        justify-items: stretch;
+    }
+
+    article:hover,
+    article:focus {
+        justify-items: start;
+        background-color: yellow;
+    }
+
+    article span {
+        background-color: black;
+        color: white;
+        margin: 1px;
+        text-align: center;
+    }
+
+    article,
+    span {
+        padding: 10px;
+        border-radius: 3px;
+    }
+</style>
+
+<body>
+    <article class="container" tabindex="0">
+        <span>First child</span>
+        <span>Second child</span>
+        <span>Third child</span>
+        <span>Fourth child</span>
+        <span>5 child</span>
+        <span>6 child</span>
+
+    </article>
+
+</body>
+
+</html>
