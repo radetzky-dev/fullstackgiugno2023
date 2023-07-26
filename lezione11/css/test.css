@@ -1,0 +1,54 @@
+body {
+  font: 90% Helvetica, sans-serif;
+  color: #563232;
+}
+
+p {
+  font-family: Helvetica, sans-serif;
+  color: blue;
+}
+
+#container {
+  width: 680px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+  color: grey;
+}
+
+.info {
+  background: DarkGray;
+  box-shadow: 0 0 1px rgba(169, 169, 169, 0.25);
+  color: #fff;
+  font-size: larger;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.alert {
+  background: rgb(72, 0, 139);
+  box-shadow: 0 0 1px rgba(72, 0, 139, 0.25);
+  color: #fff;
+  font-size: larger;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.success {
+  background: rgb(100, 82, 0);
+  box-shadow: 0 0 1px rgba(100, 82, 0, 0.25);
+  color: #fff;
+  font-size: larger;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/*# sourceMappingURL=test.css.map */
