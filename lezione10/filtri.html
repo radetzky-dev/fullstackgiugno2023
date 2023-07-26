@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtri</title>
+
+    <style>
+        img {
+            border: 2px solid yellow;
+            width:300px;
+        }
+
+        /* Gray the second image by 40% and blur by 5px */
+        img:nth-of-type(2) {
+            filter: grayscale(0.7) blur(5px);
+        }
+
+        img:nth-of-type(3) {
+            filter: grayscale(0.2) blur(2px);
+            filter: sepia(60%);
+        }
+
+        img:nth-of-type(4) {
+           /* filter: brightness(2);
+            filter: contrast(300%); */
+            filter: drop-shadow(16px 16px 10px black);
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="assets/AdobeStock_476155062_Preview.jpeg" alt="Original image is sharp" />
+    <img src="assets/AdobeStock_476736381_Preview.jpeg" alt="The image and border are blurred and muted" />
+
+    <img src="assets/AdobeStock_477707695_Preview.jpeg" alt="The image and border are blurred and muted" />
+
+    <img src="assets/AdobeStock_476112891_Preview.jpeg" alt="The image and border are blurred and muted" />
+
+</body>
+
+</html>
