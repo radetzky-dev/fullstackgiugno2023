@@ -2,7 +2,8 @@
 .navigation-bar {
   display: flex;
   justify-content: space-around;
-  background-color: #966b9d;
+  background-color: #004267;
+  
 }
 
 .navigation-bar > a {
@@ -14,7 +15,7 @@
 }
 
 .navigation-bar > a:hover {
-  background-color: #c98686;
+  background-color: #0090D0;
 }
 
 /** Grid centrale **/
