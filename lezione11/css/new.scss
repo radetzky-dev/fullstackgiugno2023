@@ -1,0 +1,33 @@
+$light-background: yellow;
+$light-text: #036;
+$dark-background: #6b717f;
+$dark-text: #d2e1dd;
+
+@mixin theme-colors($light-theme: true) {
+  @if $light-theme {
+    background-color: $light-background;
+    color: $light-text;
+  } @else {
+    background-color: $dark-background;
+    color: $dark-text;
+  }
+}
+
+.banner {
+  @include theme-colors($light-theme: true);
+  body.dark & {
+    @include theme-colors($light-theme: false);
+  }
+}
+
+$base-color: rgb(11, 81, 80);
+
+ul {
+    background-color: yellow;
+}
+
+@for $i from 1 through 7 {
+  li:nth-child(#{$i}) {
+    background-color: lighten($base-color, $i * 5%);
+  }
+}

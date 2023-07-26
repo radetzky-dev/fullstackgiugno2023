@@ -1,0 +1,42 @@
+.banner {
+  background-color: yellow;
+  color: #036;
+}
+body.dark .banner {
+  background-color: #6b717f;
+  color: #d2e1dd;
+}
+
+ul {
+  background-color: yellow;
+}
+
+li:nth-child(1) {
+  background-color: #0e6766;
+}
+
+li:nth-child(2) {
+  background-color: #117e7c;
+}
+
+li:nth-child(3) {
+  background-color: #149493;
+}
+
+li:nth-child(4) {
+  background-color: #17aba9;
+}
+
+li:nth-child(5) {
+  background-color: #1ac1bf;
+}
+
+li:nth-child(6) {
+  background-color: #1dd8d5;
+}
+
+li:nth-child(7) {
+  background-color: #2ce2e0;
+}
+
+/*# sourceMappingURL=new.css.map */
