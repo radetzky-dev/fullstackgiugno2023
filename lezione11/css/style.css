@@ -98,3 +98,10 @@
   gap: 0px 0px;
   grid-auto-flow: row;
 }
+
+/** stili titoli ecc **/
+
+.article-title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3em;   
+}
