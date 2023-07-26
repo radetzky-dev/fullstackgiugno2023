@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animazioni</title>
+    <style>
+        .elm2 {
+            border: 2px solid;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            animation-name: over-and-back;
+            animation-duration: 5s;
+        }
+
+        @keyframes over-and-back {
+            0% {
+                background-color: hsl(271, 49%, 54%, 0);
+                position: relative;
+                left: 0;
+            }
+
+            30% {
+                background-color: hsl(73, 11%, 53%);
+                position: relative;
+                left: 30%;
+                top: 100px;
+            }
+
+            50% {
+                background-color: hsl(271, 49%, 54%, 1);
+                position: relative;
+                left: 100%;
+                top: 75px;
+            }
+
+            100% {
+                background-color: hsl(271, 49%, 54%, 0);
+                position: relative;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div class="elm2">&nbsp;</div>
+    </div>
+
+</body>
+
+</html>
