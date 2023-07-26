@@ -24,10 +24,36 @@
 
         .no-perspective-box {
             transform: rotateX(-15deg) rotateY(30deg);
+            animation-name: dado-che-gira;
+            animation-duration: 5s;
+            animation-iteration-count: 3;
+        }
+
+        @keyframes dado-che-gira {
+            0% {
+                background-color: hsl(271, 49%, 54%, 0);
+                position: relative;
+                left: 0;
+            }
+
+            30% {
+                background-color: hsl(73, 11%, 53%);
+                position: relative;
+                left: 30%;
+                transform: perspective(4cm) rotateX(-15deg) rotateY(50deg)
+        
+            }
+
+            100% {
+                background-color: hsl(271, 49%, 54%, 0);
+                position: relative;
+                left: 0;
+                transform: perspective(12cm) rotateX(-30deg) rotateY(50deg);
+            }
         }
 
         .perspective-box-far {
-            transform: perspective(9cm) rotateX(-15deg) rotateY(30deg);
+            transform: perspective(12cm) rotateX(-15deg) rotateY(30deg);
         }
 
         .perspective-box-closer {
