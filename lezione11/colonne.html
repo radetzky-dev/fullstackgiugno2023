@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colonne</title>
+    <style>
+        img {
+            width: 220px;
+            margin-right: 5px;
+        }
+
+        @media (max-width:700px) {
+            img {
+                display: none;
+            }
+        } 
+
+        @media (max-width:400px) {
+            img {
+                display: block;
+                width: 50px;
+            }
+        } 
+
+        .content-box {
+            columns: 3 auto;
+            border: 1px solid;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content-box" >
+    <img src="assets/F2_WeekendWrapUp023-Rd10HUN.webp" alt="">
+    <p>
+        This is a bunch of text split into three columns using the CSS `columns`
+        property. The text is equally distributed over the columns.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vitae ut ipsum necessitatibus eius esse totam
+        nobis dicta provident ex eaque animi ea, atque sapiente fuga, error impedit unde asperiores.
+    </p>
+</div>
+</body>
+
+</html>
