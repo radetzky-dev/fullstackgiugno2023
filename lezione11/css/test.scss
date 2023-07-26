@@ -52,3 +52,21 @@ nav {
   .success {
     @include theme($theme: rgb(100, 82, 0));
   }
+
+  .fail {
+    @include theme;
+    font-weight: 900;
+  }
+
+  %message-shared {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    color: #333;
+  }
+
+  .message-success {
+    @extend %message-shared;
+    border-color: green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }

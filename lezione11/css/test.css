@@ -51,4 +51,25 @@ nav a {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+.fail {
+  background: DarkGray;
+  box-shadow: 0 0 1px rgba(169, 169, 169, 0.25);
+  color: #fff;
+  font-size: larger;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 900;
+}
+
+.message-success {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  color: #333;
+}
+
+.message-success {
+  border-color: green;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 /*# sourceMappingURL=test.css.map */
