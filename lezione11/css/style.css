@@ -1,3 +1,24 @@
+/** header **/
+.navigation-bar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #966b9d;
+}
+
+.navigation-bar > a {
+  font-size: 0.8vw;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+.navigation-bar > a:hover {
+  background-color: #c98686;
+}
+
+/** Grid centrale **/
+
 .container {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
