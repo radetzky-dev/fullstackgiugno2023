@@ -1,23 +1,59 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <!--
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" >
-    <link href="css/mystyles.css" rel="stylesheet" >
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mystyles.css" rel="stylesheet">
 
-  </head>
-  <body>
-    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary" aria-label="Third navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mio SITO</a>
+
+            <img src="cioccolato.jpg" alt="logo" class="img-fluid" width="100px">
+            <div class="navbar-collapse collapse show" id="navbarsExample03" style="">
+
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">Dropdown</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form role="search">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
     <h1>Hello, world!</h1>
     <h2>ciao mondo</h2>
     <h3>questo è h3</h3>
     <h4>test</h4>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo dignissimos accusantium reprehenderit cupiditate eos incidunt, neque ipsum quia beatae sequi tempora id maiores veritatis illum mollitia vitae, labore reiciendis a.</p>
-    <script src="js/bootstrap.bundle.min.js" ></script>
-  </body>
+
+    <img src="https://placehold.co/600x400" class="img-thumbnail rounded float-end">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo dignissimos accusantium reprehenderit
+        cupiditate eos incidunt, neque ipsum quia beatae sequi tempora id maiores veritatis illum mollitia vitae, labore
+        reiciendis a.</p>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
