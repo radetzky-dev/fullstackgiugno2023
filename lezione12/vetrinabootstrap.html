@@ -1,22 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vetrina</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- containier / rows/columns-->
 
-    <!-- header-->
-    Title / link
-    <!-- main -->
-    Titoli / p / img
-    <!-- sidebar -->
-    Titoli / p / img
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary" aria-label="Third navbar example">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Mio SITO</a>
+
+                <img src="cioccolato.jpg" alt="logo" class="img-fluid" width="100px">
+                <div class="navbar-collapse collapse show" id="navbarsExample03">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                aria-expanded="false">Dropdown</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form role="search">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="row bg-secondary">
+            <div class="col-8 bg-warning">
+                <main class="container border-bottom mb-2">
+                    <h3>Titolo articolo</h3>
+                    <img src="https://placehold.co/400x350" class="img-fluid" alt="immagine">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate repudiandae placeat minus,
+                        sunt
+                        odio quaerat laborum optio, obcaecati quasi porro amet dolores quibusdam blanditiis mollitia
+                        fuga
+                        error, ipsum aspernatur harum!</p>
+
+                    <h3>Titolo articolo</h3>
+                    <img src="https://placehold.co/400x350" class="img-fluid" alt="immagine">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate repudiandae placeat minus,
+                        sunt
+                        odio quaerat laborum optio, obcaecati quasi porro amet dolores quibusdam blanditiis mollitia
+                        fuga
+                        error, ipsum aspernatur harum!</p>
+                </main>
+
+                <section class="row bg-primary">
+                    <div class="col-6">
+                        <img src="https://placehold.co/500" class="img-fluid" alt="immagine">
+                    </div>
+                    <div class="col-6">
+                        <h2>This is Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis rem voluptas quibusdam nihil
+                            maxime tempora neque? Laudantium, beatae iure labore corporis et distinctio officia ducimus.
+                            Incidunt impedit quae magni saepe.</p>
+                    </div>
+                    <div class="col-6">
+                        <h2>This is Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis rem voluptas quibusdam nihil
+                            maxime tempora neque? Laudantium, beatae iure labore corporis et distinctio officia ducimus.
+                            Incidunt impedit quae magni saepe.</p>
+                    </div>
+                    <div class="col-6">
+                        <img src="https://placehold.co/500" class="img-fluid" alt="immagine">
+                    </div>
+
+                </section>
+
+            </div>
+
+            <!-- sidebar -->
+            <div class="col-4 border-start">
+
+                <aside class="container">
+                    <h4>Titolo articolo</h4>
+                    <img src="https://placehold.co/200" class="img-fluid" alt="immagine">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate repudiandae placeat minus,
+                        sunt
+                        odio quaerat laborum optio, obcaecati quasi porro amet dolores quibusdam blanditiis mollitia
+                        fuga
+                        error, ipsum aspernatur harum!</p>
+
+                    <h4>Titolo articolo</h4>
+                    <img src="https://placehold.co/200" class="img-fluid" alt="immagine">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate repudiandae placeat minus,
+                        sunt
+                        odio quaerat laborum optio, obcaecati quasi porro amet dolores quibusdam blanditiis mollitia
+                        fuga
+                        error, ipsum aspernatur harum!</p>
+
+                    <h4>Titolo articolo</h4>
+                    <img src="https://placehold.co/200" class="img-fluid" alt="immagine">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate repudiandae placeat minus,
+                        sunt
+                        odio quaerat laborum optio, obcaecati quasi porro amet dolores quibusdam blanditiis mollitia
+                        fuga
+                        error, ipsum aspernatur harum!</p>
+                </aside>
+
+            </div>
+        </div>
+
+    </div>
+
+
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
