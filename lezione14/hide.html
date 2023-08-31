@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="d-lg-none">hide on lg and wider screens</div>
+        <div class="d-none d-lg-block">hide on screens smaller than lg</div>
+
+        <div class="bg-primary">
+            Hello world! SEMPRE
+        </div>
+        <div class="bg-secondary d-none d-sm-block">
+            Hello world! hide xs
+        </div>
+        <div class="bg-warning d-none d-md-block">
+            Hello world!
+        </div>
+        <div class="bg-primary">
+            Hello world!
+        </div>
+        <div class="bg-primary">
+            Hello world!
+        </div>
+        <hr>
+        <div class="position-relative">
+            <div class="position-absolute top-0 start-0">top</div>
+            <div class="position-absolute top-0 end-0">end</div>
+            <div class="position-absolute top-50 start-50">mezzo</div>
+            <div class="position-absolute bottom-50 end-50">mezzo</div>
+            <div class="position-absolute bottom-0 start-0">start</div>
+            <div class="position-absolute bottom-0 end-0">end</div>
+        </div>
+
+        <hr>
+
+
+        <div class="visible">si vede</div>
+        <div class="invisible">non si vede</div>
+
+    </div>
+
+
+    <button type="button" class="btn btn-primary position-relative">
+        Mails <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">+99 <span
+                class="visually-hidden">unread messages</span></span>
+    </button>
+
+    <div class="position-relative py-2 px-4 text-bg-secondary border border-secondary rounded-pill">
+        Marker <svg width="1em" height="1em" viewBox="0 0 16 16"
+            class="position-absolute top-100 start-50 translate-middle mt-1" fill="var(--bs-secondary)"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+        </svg>
+    </div>
+
+    <button type="button" class="btn btn-primary position-relative">
+        Alerts <span
+            class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2"><span
+                class="visually-hidden">unread messages</span></span>
+    </button>
+
+    <hr>
+
+    <p class="text-start">Start aligned text on all viewport sizes.</p>
+<p class="text-center">Center aligned text on all viewport sizes.</p>
+<p class="text-end">End aligned text on all viewport sizes.</p>
+
+<p class="text-sm-end">End aligned text on viewports sized SM (small) or wider.</p>
+<p class="text-md-end">End aligned text on viewports sized MD (medium) or wider.</p>
+<p class="text-lg-end">End aligned text on viewports sized LG (large) or wider.</p>
+<p class="text-xl-end">End aligned text on viewports sized XL (extra large) or wider.</p>
+<p class="text-xxl-end">End aligned text on viewports sized XXL (extra extra large) or wider.</p>
+
+
+<div class="badge bg-primary text-wrap" style="width: 4rem;">
+    This text should wrap.
+  </div>
+
+  <p class="text-lowercase">LowercFFFFFFdsfsdased text.</p>
+<p class="text-uppercase">Uppercased text.</p>
+<p class="text-capitalize">capitaliZed text.</p>
+
+<p class="fs-1">.fs-1 text</p>
+<p class="fs-2">.fs-2 text</p>
+<p class="fs-3">.fs-3 text</p>
+<p class="fs-4">.fs-4 text</p>
+<p class="fs-5">.fs-5 text</p>
+<p class="fs-6">.fs-6 text</p>
+
+<p class="fw-bold">Bold text.</p>
+<p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
+<p class="fw-semibold">Semibold weight text.</p>
+<p class="fw-medium">Medium weight text.</p>
+<p class="fw-normal">Normal weight text.</p>
+<p class="fw-light">Light weight text.</p>
+<p class="fw-lighter">Lighter weight text (relative to the parent element).</p>
+<p class="fst-italic">Italic text.</p>
+<p class="fst-normal">Text with normal font style</p>
+
+<p class="lh-1">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-base">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Home</li>
+    </ol>
+  </nav>
+  
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </nav>
+  
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
+  </nav>
+
+</body>
+
+</html>
