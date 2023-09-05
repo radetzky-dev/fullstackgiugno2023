@@ -9,6 +9,7 @@
 
 <body>
     <h2>Trovate i risultati strani</h2>
+
     <script>
         var v1 = 5;
         var v2 = 3.5;
@@ -40,15 +41,37 @@
         console.log(somma - 3);
         console.log(somma * 2);
         console.log(somma / 3);
+        console.log(somma % 2);
 
-        console.log ("Stranezze");
+        console.log("Stranezze");
         console.log(sommaStrana / 3);
         console.log(sommaStrana * 2);
 
+        console.log("----");
+        //combinati
+        var valore = 11;
+        console.log(valore);
+        valore = valore + 1;
+        console.log(valore);
+        valore++;
+        console.log(valore);
+        valore--;
+        console.log(valore);
+        valore += 3;
+        console.log(valore);
+        valore -= 3;
+        console.log(valore);
 
+        var average = (valore + somma) / 2;
 
+        console.log("Media tra valore e somma " + average);
 
+        let myNumber = "14.378";
+        //   myNumber += 3;
+        //   console.log("Risultato " + myNumber)
 
+        myNumber = Number(myNumber) + 3;
+        console.log("Risultato OK " + myNumber);
     </script>
 
 </body>
