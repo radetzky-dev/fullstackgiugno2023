@@ -11,17 +11,70 @@
 
     <script>
         var max = 10;
-        for (var i = 1; i < max; i+=3) {
+        for (var i = 1; i < max; i += 3) {
             console.log("Valore " + i);
         }
-        console.log ("Dopo ciclo valori i "+i + " max "+max);
+        console.log("Dopo ciclo valori i " + i + " max " + max);
 
         max = 4;
 
         for (var i = 10; i > max; i--) {
             console.log("Valore " + i);
         }
-        console.log ("Dopo ciclo valori i "+i + " max "+max);
+        console.log("Dopo ciclo valori i " + i + " max " + max);
+
+
+        let result = '';
+        i = 0;
+
+        do {
+            i = i + 1;
+            result = result + i;
+            console.log("risulato in progress " + result);
+        } while (i < 5);
+
+        console.log("Finale " + result);
+
+
+        const object = { a: 1, b: 2, c: 3 };
+
+        for (const property in object) {
+            console.log(`${property}: ${object[property]}`);
+        }
+
+
+        const array1 = ['a', 'b', 'c'];
+
+        for (const element of array1) {
+            console.log(element);
+        }
+
+
+        i = 0;
+        while (i < 6) {
+            console.log("ciclo " + i);
+            if (i === 3) {
+                console.log("Ho trovato il 3 ed esco");
+                break;
+            }
+            i = i + 1;
+        }
+        console.log(i);
+
+        let text = '';
+
+        for (let i = 0; i < 10; i++) {
+            if (i === 3) {
+                console.log("Ho trovato il 3 e continuo ignorando il resto del codice del loop");
+                continue;
+            }
+            text = text + i;
+            console.log (i+") ciao");
+        }
+
+        console.log(text);
+
+
     </script>
 </body>
 
