@@ -11,11 +11,11 @@
     <script>
 
         //set Vars
-        var etaRecord = 116;
+        var recordAge = 116;
         var checkAge = false;
         var yourAge = 0;
         var limitAge = 100;
-        var maxLimit = etaRecord + ((etaRecord/100)*10);
+        var maxLimit = recordAge + ((recordAge/100)*10);
 
         //currentYear
         var data = new Date();
@@ -27,6 +27,7 @@
 
         while (!checkAge) {
             yourAge = prompt("Inserisci la tua età o l'anno di nascita:");
+
             if (yourAge.length > 3) {
                 if ((isNaN(yourAge)) || (yourAge > currentYear)) {
                     console.log("Devi inserire un valore numerico per la data minore di " + currentYear);
@@ -36,7 +37,7 @@
                     console.log("Condizione verificata!");
                 }
             } else {
-                if ((isNaN(yourAge)) || ((yourAge > maxLimit) || (yourAge < 0))) {
+                if ((yourAge ==="") || (isNaN(yourAge)) || ((yourAge > maxLimit)) || (yourAge < 0)) {
                     console.log("Devi inserire un valore numerico compreso fra 0 e "+maxLimit);
                 } else {
                     checkAge = true;
@@ -46,7 +47,7 @@
             }
         }
 
-        if (yourAge > etaRecord) {
+        if (yourAge > recordAge) {
             console.log("Sei il più vecchio al mondo");
         }
 
