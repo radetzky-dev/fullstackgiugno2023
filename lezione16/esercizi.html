@@ -36,7 +36,7 @@
   Math.floor
     -->
   <script>
-    console.log ("Esercizio 1");
+    console.log("Esercizio 1");
     var gatti = prompt("Quanti gatti ci sono?");
     var gattixfila = prompt("Quanti gatti ci sono per fila?");
     var nFile = Math.ceil(gatti / gattixfila);
@@ -49,8 +49,14 @@
       alert("Numero di file = " + nFile + " gatti mancanti = " + gattiMancanti);
     }
 
-    console.log ("Esercizio 2");
+    console.log("Esercizio 2");
     var numeroDiSecondi = prompt("Quanti secondi vuoi convertire?");
+    var ore = Math.floor(numeroDiSecondi / 3600);
+    var restoMinuti = numeroDiSecondi % 3600;
+    var minuti = Math.floor(restoMinuti / 60);
+    var secondi = restoMinuti % 60;
+    alert(ore + " ore, " + minuti + " minuti e " + secondi + " secondi");
+
   </script>
 
 </body>
