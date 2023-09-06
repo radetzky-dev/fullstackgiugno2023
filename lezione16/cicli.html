@@ -9,14 +9,43 @@
 
 <body>
     <script>
-        var x=0;
-        console.log ("Prima del ciclo x vale "+x);
+        var x = 0;
+        x = prompt("Inserisci il valore di x");
+
+        //questo sia richiesto finché non inseriamo i dati corretti
+        if (isNaN(x)) {
+            console.log("Devi inserire un numero. Setto default");
+            x = 1;
+        } else {
+            if (x >= 10) {
+                console.log("Devi inserire un numero minore di 10. Setto defualt");
+                x = 1;
+                //check sia maggiore di zero
+            }
+        }
+
+        console.log("Prima del ciclo x vale " + x);
         while (x <= 10) {
-            console.log ("x vale "+x);
+            console.log("x vale " + x);
+            if (x === "4") {
+                console.log("Ho trovato il 4 con tipo e valore!");
+            } else if (x == "4") {
+                console.log("Ho trovato il 4 con solo valore!");
+            } else if (x != "4") {
+                console.log("Questo numero è diverso numericamente da 4");
+            } else if (x !== 4) {
+                console.log("Questo numero è diverso da 4");
+
+            }
+
+            if (x === 6) {
+                console.log("Ho trovato il 6 con tipo e valore!");
+            } else {
+                console.log("Questo numero è diverso da 6");
+            }
             x++;
         }
-        console.log ("Sono uscito dal ciclo!");
-
+        console.log("Sono uscito dal ciclo!");
 
     </script>
 </body>
