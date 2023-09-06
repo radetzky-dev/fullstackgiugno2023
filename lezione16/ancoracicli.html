@@ -69,11 +69,25 @@
                 continue;
             }
             text = text + i;
-            console.log (i+") ciao");
+            console.log(i + ") ciao");
         }
 
         console.log(text);
 
+
+        setTimeout(() => {
+            console.log("Delayed for 5 second.");
+        }, 5000);
+
+
+        const intervalID = setInterval(myCallback, 500, "Parameter 1", "Parameter 2");
+
+        function myCallback(a, b) {
+            // Your code here
+            // Parameters are purely optional.
+            console.log(a);
+            console.log(b);
+        }
 
     </script>
 </body>
