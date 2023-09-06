@@ -15,21 +15,34 @@
         var checkAge = false;
         var yourAge = 0;
         var limitAge = 100;
+        var maxLimit = etaRecord + ((etaRecord/100)*10);
 
         //currentYear
         var data = new Date();
         var currentYear = data.getFullYear();
-        console.log ("Siamo nell'anno "+currentYear);
-
-        //inserisce eta o anno di nascita
+        console.log("Siamo nell'anno " + currentYear);
+        /*
+        todo : cosa succede se ha === limitAge e se ha === etaRecord
+        */
 
         while (!checkAge) {
-            yourAge = prompt("Inserisci la tua età:");
-            if ((isNaN(yourAge)) || ((yourAge > 150) || (yourAge < 0))) {
-                console.log("Devi inserire un numero compreso fra 0 e 150");
+            yourAge = prompt("Inserisci la tua età o l'anno di nascita:");
+            if (yourAge.length > 3) {
+                if ((isNaN(yourAge)) || (yourAge > currentYear)) {
+                    console.log("Devi inserire un valore numerico per la data minore di " + currentYear);
+                } else {
+                    checkAge = true;
+                    console.log("Hai inserito una data");
+                    console.log("Condizione verificata!");
+                }
             } else {
-                checkAge = true;
-                console.log("Condizione verificata!");
+                if ((isNaN(yourAge)) || ((yourAge > maxLimit) || (yourAge < 0))) {
+                    console.log("Devi inserire un valore numerico compreso fra 0 e "+maxLimit);
+                } else {
+                    checkAge = true;
+                    console.log("Hai inserito un'età");
+                    console.log("Condizione verificata!");
+                }
             }
         }
 
@@ -38,11 +51,11 @@
         }
 
         else if (yourAge > limitAge) {
-            console.log("Hai superato i "+ limitAge +" anni");
+            console.log("Hai superato i " + limitAge + " anni");
         }
 
         else {
-            console.log("Ti mancano " + (limitAge - yourAge) + " anni per arrivare a "+limitAge);
+            console.log("Ti mancano " + (limitAge - yourAge) + " anni per arrivare a " + limitAge);
         }
 
     </script>
