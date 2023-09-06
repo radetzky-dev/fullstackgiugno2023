@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age</title>
+</head>
+
+<body style="background-color: rgb(63, 50, 50);">
+    <script>
+
+        //set Vars
+        var etaRecord = 116;
+        var checkAge = false;
+        var yourAge = 0;
+        var limitAge = 100;
+
+        //currentYear
+        var data = new Date();
+        var currentYear = data.getFullYear();
+        console.log ("Siamo nell'anno "+currentYear);
+
+        //inserisce eta o anno di nascita
+
+        while (!checkAge) {
+            yourAge = prompt("Inserisci la tua età:");
+            if ((isNaN(yourAge)) || ((yourAge > 150) || (yourAge < 0))) {
+                console.log("Devi inserire un numero compreso fra 0 e 150");
+            } else {
+                checkAge = true;
+                console.log("Condizione verificata!");
+            }
+        }
+
+        if (yourAge > etaRecord) {
+            console.log("Sei il più vecchio al mondo");
+        }
+
+        else if (yourAge > limitAge) {
+            console.log("Hai superato i "+ limitAge +" anni");
+        }
+
+        else {
+            console.log("Ti mancano " + (limitAge - yourAge) + " anni per arrivare a "+limitAge);
+        }
+
+    </script>
+
+</body>
+
+</html>
