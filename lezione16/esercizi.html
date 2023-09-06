@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-    <!--
+  <!--
 
         1)
           Scrivi un programma che dato:
@@ -35,6 +35,20 @@
 
   Math.floor
     -->
+  <script>
+    var gatti = prompt("Quanti gatti ci sono?");
+    var gattixfila = prompt("Quanti gatti ci sono per fila?");
+    var nFile = Math.ceil(gatti / gattixfila);
+    var gattiAvanzati = gatti % gattixfila;
+    if (gattiAvanzati == 0) {
+      alert("Numero di file = " + nFile);
+    }
+    else {
+      var gattiMancanti = gattixfila - gattiAvanzati;
+      alert("Numero di file = " + nFile + " gatti mancanti = " + gattiMancanti);
+    }
+  </script>
+
 </body>
 
 </html>
