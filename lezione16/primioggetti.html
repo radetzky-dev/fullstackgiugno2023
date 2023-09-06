@@ -9,6 +9,24 @@
 
 <body>
     <script>
+
+        const expr = 'Papayas';
+        switch (expr) {
+            case 'Oranges':
+                console.log('Oranges are $0.59 a pound.');
+                break;
+            case 'Apple':
+                console.log('Apple are $0.33 a pound.');
+                break;
+            case 'Mangoes':
+            case 'Papayas':
+                console.log('Mangoes and papayas are $2.79 a pound.');
+                // Expected output: "Mangoes and papayas are $2.79 a pound."
+                break;
+            default:
+                console.log(`Sorry, we are out of ${expr}.`);
+        }
+
         const mySet1 = new Set();
 
         mySet1.add(1); // Set(1) { 1 }
@@ -48,13 +66,13 @@
         console.log(birthday5);
 
         try {
-            console.log ("Programma in esecuzione...");
-            console.log ("Si verifca un errore...");
+            console.log("Programma in esecuzione...");
+            console.log("Si verifca un errore...");
             throw new Error("Whoops!");
-            console.log ("Va tutto bene...");
+            console.log("Va tutto bene...");
 
         } catch (e) {
-            console.log ("Si è vericato un errore");
+            console.log("Si è vericato un errore");
             console.error(`${e.name}: ${e.message}`);
         }
 
