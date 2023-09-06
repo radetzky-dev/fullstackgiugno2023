@@ -10,15 +10,15 @@
 <body>
     <script>
         var x = 0;
-        x = prompt("Inserisci il valore di x");
 
-        //questo sia richiesto finché non inseriamo i dati corretti
+       //questo sia richiesto finché non inseriamo i dati corretti
+        x = prompt("Inserisci il valore di x (tra 0 e 9)");
         if (isNaN(x)) {
             console.log("Devi inserire un numero. Setto default");
             x = 1;
         } else {
             if (x >= 10) {
-                console.log("Devi inserire un numero minore di 10. Setto defualt");
+                console.log("Devi inserire un numero minore di 10. Setto default");
                 x = 1;
                 //check sia maggiore di zero
             }
