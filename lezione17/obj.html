@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oggetti</title>
+</head>
+
+<body>
+    <script>
+        var persona = new Object({
+            nome: "Mario",
+            cognome: "Rossi",
+            eta: 25,
+            assunto: true,
+            stato_civile: null
+        });
+        console.log("Ti chiami " + persona.nome);
+        console.log("Il tuo cognome è " + persona.cognome);
+        persona.indirizzo = "Via Garibaldi, 50 - Roma";
+
+        //prompt
+        persona.stato_civile = "celibe";
+        persona.cognome = "Verdi";
+        console.log("Il tuo indirizzo è " + persona.indirizzo);
+        console.log(persona);
+
+    </script>
+</body>
+
+</html>
