@@ -8,21 +8,27 @@
 </head>
 
 <body>
-    <!--
-         una “classe” che permetta di gestire una carta da gioco: Card.
-● Questa dovrà possedere le properties:
-a. face (a cui potrà essere assegnato un valore compreso tra : Asso, 2, 3, 4, ..., Re.
-b. suit (a cui potrà essere assegnato un valore compreso tra (1 cuori, 2 fiori, 3 picche, 4 quadri)
-● Creare poi un altro oggetto CardDeck che abbia un metodo “shuffle” capace di
-instanziare una carta “con valori random”.
-a. Suggerimento: utilizzare il metodo Math.round(Math.random() * max)
-    -->
 
     <script>
+        class Card {
 
-        var suits = ["spades", "diamonds", "clubs", "hearts"];
-        var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+            shuffleDeck() {
+                var suits = ["spades", "diamonds", "clubs", "hearts"];
+                var randomSuit = Math.round((Math.random() * (suits.length - 1)));
+
+                var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+                var randomValue = Math.round(Math.random() * (values.length - 1));
+
+                console.log(`Il valore è ${values[randomValue]} ed il seme è ${suits[randomSuit]}`);
+
+            }
+        }
+
+        var cardDeck = new Card();
+        cardDeck.shuffleDeck();
+
     </script>
+
 </body>
 
 </html>
