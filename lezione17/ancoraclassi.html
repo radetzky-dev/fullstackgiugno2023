@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+   
+
+        //ereditarietà
+
+        class Animal {
+            constructor(name) {
+                this.name = name;
+            }
+
+            speak() {
+                console.log(`${this.name} makes a noise.`);
+            }
+        }
+
+        class Dog extends Animal {
+            constructor(name) {
+                super(name); // call the super class constructor and pass in the name parameter
+            }
+
+            speak() {
+                console.log(`${this.name} barks.`);
+            }
+        }
+
+        const d = new Dog("Mitzie");
+        d.speak(); // Mitzie barks.
+
+
+        class Rectangle {
+            constructor(height, width) {
+                this.name = 'Rectangle';
+                this.height = height;
+                this.width = width;
+            }
+            sayName() {
+                console.log(`Hi, I am a ${this.name}.`); // alternativa a "Hi "+this.name+" ciao";
+            }
+            get area() {
+                return this.height * this.width;
+            }
+            set area(value) {
+                this._area = value;
+            }
+        }
+
+        class Square extends Rectangle {
+            constructor(length) {
+         
+                // Here, it calls the parent class's constructor with lengths
+                // provided for the Rectangle's width and height
+                super(length, length);
+
+                // Note: In derived classes, super() must be called before you
+                // can use 'this'. Leaving this out will cause a reference error.
+                this.name = 'Square';
+            }
+        }
+
+        const quadrato = new Square(10);
+        quadrato.sayName();
+        console.log (quadrato.area);
+
+        const rettangolo = new Rectangle(10,20);
+        rettangolo.sayName();
+        console.log (rettangolo.area);
+
+    </script>
+</body>
+
+</html>
