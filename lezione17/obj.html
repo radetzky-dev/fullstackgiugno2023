@@ -26,7 +26,6 @@
         console.log("Il tuo indirizzo è " + persona.indirizzo);
         console.log(persona);
 
-
         const obj = {
             foo: 1,
             // You should not define such a method on your own object,
@@ -35,18 +34,59 @@
             propertyIsEnumerable() {
                 return false;
             },
-            conta(){
+            conta() {
                 return "sto contando...";
             },
-            calcola(x,y)
-            {
-                return x+y;
+            calcola(x, y) {
+                return x + y;
             }
         };
 
         obj.propertyIsEnumerable("foo"); // false; unexpected result
-        console.log (obj.foo);
-        
+        console.log(obj.foo);
+
+        const object1 = {};
+        object1.property1 = 42;
+        object1.mangia = "si";
+
+        console.log(object1.hasOwnProperty('property1'));
+        // Expected output: true
+
+        console.log(object1.hasOwnProperty('toString'));
+        // Expected output: false
+
+        console.log(object1.hasOwnProperty('hasOwnProperty'));
+        // Expected output: false
+
+        if (object1.hasOwnProperty('mangia')) {
+            console.log("Dò da mangiare " + object1.mangia);
+        } else {
+            console.log("oggi digiuno");
+        }
+
+        var myO = new Object();
+        myO.nome ="paolo";
+        console.log (myO);
+
+        var cognome ="Rossi";
+        const object2 = {
+            a: 'somestring',
+            b: 42,
+            c: false,
+            nome: "paolo",
+            conta: 0,
+            cognome: cognome
+        };
+
+        const object3 = {
+        };
+        object3.nome ="Mario";
+        console.log (object3);
+
+        console.log(Object.keys(object2));
+        console.log(object2);
+        // Expected output: Array ["a", "b", "c"]
+        console.log ("Nome "+object2.nome);
 
     </script>
 </body>
