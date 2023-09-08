@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        class Canzone {
+            constructor(titolo, autore) {
+                this.titolo = titolo;
+                this.autore = autore;
+            }
+
+            play() {
+                console.log('Sta suonando la canzone!');
+            }
+
+            static giradischi(nameDisco) {
+                console.log("Metto sul piatto il disco " + nameDisco);
+            }
+        }
+
+        Canzone.giradischi("Sinatra");
+
+        const miaCanzone = new Canzone('Nothing else matter', 'Metallica');
+        console.log(miaCanzone.titolo);
+        miaCanzone.play();
+
+
+        class Media {
+            constructor(infoSong) {
+                this.dataPubb = infoSong.dataPubb;
+                this.nome = infoSong.nome;
+                this.etichetta = infoSong.etichetta;
+            }
+
+            getTitle()
+            {
+                console.log ("Il titolo della canzone è "+this.nome);
+            }
+
+            getPrinter()
+            {
+                console.log ("La canzone "+this.nome+ " è pubblicata dall'etichetta "+this.etichetta);
+            }
+        }
+
+        class Song extends Media {
+            constructor(infoCanzone) {
+                super(infoCanzone);
+                this.autore = infoCanzone.autore;
+                this.distributore = infoCanzone.distributore;
+            }
+
+            getDistribution(regione)
+            {
+                console.log ("Nella regione "+ regione +" è distribuito da "+this.distributore);
+            }
+
+            play() {
+                console.log('Sto suonando '+this.nome+' di '+this.autore + ' incisa nel '+this.dataPubb);
+            }
+        }
+
+        const myCanzone = new Song({
+            autore: 'Queen',
+            nome: 'Bohemian Rhapsody',
+            dataPubb: 1975,
+            etichetta: "Sugar",
+            distributore: "IP"
+        });
+
+        myCanzone.play();
+        myCanzone.getTitle();
+        myCanzone.getPrinter();
+        myCanzone.getDistribution("Lazio");
+
+
+        class Cane {
+            constructor(nome) {
+                this._nome = nome;
+            }
+
+            presenta() {
+                console.log('Questo è ' + this._nome + ' !');
+            }
+
+            static abbaia() {
+                console.log('BauBau!');
+            }
+        }
+
+        const mioCane = new Cane('Bob');
+        mioCane.presenta();
+
+        Cane.abbaia();
+
+
+    </script>
+</body>
+
+</html>
