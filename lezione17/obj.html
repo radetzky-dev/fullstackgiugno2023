@@ -65,10 +65,10 @@
         }
 
         var myO = new Object();
-        myO.nome ="paolo";
-        console.log (myO);
+        myO.nome = "paolo";
+        console.log(myO);
 
-        var cognome ="Rossi";
+        var cognome = "Rossi";
         const object2 = {
             a: 'somestring',
             b: 42,
@@ -80,13 +80,27 @@
 
         const object3 = {
         };
-        object3.nome ="Mario";
-        console.log (object3);
+        object3.nome = "Mario";
+        console.log(object3);
 
         console.log(Object.keys(object2));
         console.log(object2);
         // Expected output: Array ["a", "b", "c"]
-        console.log ("Nome "+object2.nome);
+        console.log("Nome " + object2.nome);
+
+        const saluto = {
+            greet() {
+                console.log("hello!");
+            },
+        };
+
+        const salutare = Object.create(saluto);
+        salutare.greet(); // hello!
+        salutare.nome="MArio";
+        console.log (salutare.nome);
+        
+        console.log (salutare.toString());
+
 
     </script>
 </body>
