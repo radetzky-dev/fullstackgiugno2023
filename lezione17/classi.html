@@ -11,13 +11,16 @@
     <script>
 
         class Canzone {
+            #prova; //campo privato non si vede fuori da classe
+
             constructor(titolo, autore) {
                 this.titolo = titolo;
                 this.autore = autore;
+                this.#prova = "prova"; 
             }
 
             get fullTitle() {
-                return "Che bella questa canzone! "+this.titolo;
+                return "Che bella "+ this.#prova+ " questa canzone! "+this.titolo;
             }
 
             set fullTitle(value) {
@@ -45,6 +48,7 @@
         console.log(miaCanzone.fullTitle);
 
         console.log(miaCanzone.titolo);
+    
 
         console.log(miaCanzone.autore);
 
