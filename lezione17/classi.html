@@ -16,6 +16,14 @@
                 this.autore = autore;
             }
 
+            get fullTitle() {
+                return "Che bella questa canzone! "+this.titolo;
+            }
+
+            set fullTitle(value) {
+                this.titolo =  value.toUpperCase();
+            }
+
             play() {
                 console.log('Sta suonando la canzone!');
             }
@@ -31,6 +39,15 @@
         console.log(miaCanzone.titolo);
         miaCanzone.play();
 
+        miaCanzone.autore ="NUOVO AUTORE";
+
+        miaCanzone.fullTitle = "volare";
+        console.log(miaCanzone.fullTitle);
+
+        console.log(miaCanzone.titolo);
+
+        console.log(miaCanzone.autore);
+
 
         class Media {
             constructor(infoSong) {
@@ -39,14 +56,12 @@
                 this.etichetta = infoSong.etichetta;
             }
 
-            getTitle()
-            {
-                console.log ("Il titolo della canzone è "+this.nome);
+            getTitle() {
+                console.log("Il titolo della canzone è " + this.nome);
             }
 
-            getPrinter()
-            {
-                console.log ("La canzone "+this.nome+ " è pubblicata dall'etichetta "+this.etichetta);
+            getPrinter() {
+                console.log("La canzone " + this.nome + " è pubblicata dall'etichetta " + this.etichetta);
             }
         }
 
@@ -57,13 +72,12 @@
                 this.distributore = infoCanzone.distributore;
             }
 
-            getDistribution(regione)
-            {
-                console.log ("Nella regione "+ regione +" è distribuito da "+this.distributore);
+            getDistribution(regione) {
+                console.log("Nella regione " + regione + " è distribuito da " + this.distributore);
             }
 
             play() {
-                console.log('Sto suonando '+this.nome+' di '+this.autore + ' incisa nel '+this.dataPubb);
+                console.log('Sto suonando ' + this.nome + ' di ' + this.autore + ' incisa nel ' + this.dataPubb);
             }
         }
 
@@ -99,6 +113,28 @@
         mioCane.presenta();
 
         Cane.abbaia();
+
+
+        let user = {
+            name: "John",
+            surname: "Smith",
+
+            get fullName() {
+                return `${this.name} ${this.surname}`;
+            },
+
+            set fullName(value) {
+                [this.name, this.surname] = value.split(" ");
+            }
+        };
+
+        console.log(user.fullName);
+
+        // set fullName viene eseguito con i valori forniti
+        user.fullName = "Alice Cooper";
+
+        console.log(user.fullName);
+
 
 
     </script>
