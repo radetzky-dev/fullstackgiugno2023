@@ -26,6 +26,28 @@
         console.log("Il tuo indirizzo è " + persona.indirizzo);
         console.log(persona);
 
+
+        const obj = {
+            foo: 1,
+            // You should not define such a method on your own object,
+            // but you may not be able to prevent it from happening if
+            // you are receiving the object from external input
+            propertyIsEnumerable() {
+                return false;
+            },
+            conta(){
+                return "sto contando...";
+            },
+            calcola(x,y)
+            {
+                return x+y;
+            }
+        };
+
+        obj.propertyIsEnumerable("foo"); // false; unexpected result
+        console.log (obj.foo);
+        
+
     </script>
 </body>
 
