@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const sales = 'Toyota';
+
+        function carTypes(name) {
+            return name === 'Honda' ? name : `Sorry, we don't sell ${name}.`;
+        }
+
+        const car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };
+
+        console.log(car.myCar);   // Saturn
+        console.log(car.getCar);  // Honda
+        console.log(car.special); // Toyota
+
+        function Somma (x,y)
+        {
+            this.x = x;
+            this.y = y;
+            this.calcola = function ()
+            {
+                return this.x+this.y;
+            }
+
+            this.dividi = function()
+            {
+                return this.x/this.y;
+            }
+        }
+
+        var conti = new Somma(10,5);
+        console.log (conti.calcola());
+        console.log (conti.dividi());
+
+
+        function MiaFunzione (name, surname)
+        {
+            return console.log ("Ciao "+name + " "+surname);
+        }
+        MiaFunzione("gino","verdi");
+
+
+        function Anagrafica(yourName, yourSurname) {
+            this.name = yourName;
+            this.surname = yourSurname
+            this.info = "Mi chiamo " + this.name + " "+this.surname;
+            this.showInfo = function () {
+                alert(this.info);
+            }
+        }
+
+        var person1 = new Anagrafica("Mario","Rossi");
+
+        console.log (person1);
+
+        person1.showInfo();
+
+        console.log (person1.info);
+
+    </script>
+</body>
+
+</html>
