@@ -22,49 +22,69 @@
         console.log(car.getCar);  // Honda
         console.log(car.special); // Toyota
 
-        function Somma (x,y)
-        {
+        function Somma(x, y) {
             this.x = x;
             this.y = y;
-            this.calcola = function ()
-            {
-                return this.x+this.y;
+            this.calcola = function () {
+                return this.x + this.y;
             }
 
-            this.dividi = function()
-            {
-                return this.x/this.y;
+            this.dividi = function () {
+                return this.x / this.y;
             }
         }
 
-        var conti = new Somma(10,5);
-        console.log (conti.calcola());
-        console.log (conti.dividi());
+        var conti = new Somma(10, 5);
+        console.log(conti.calcola());
+        console.log(conti.dividi());
 
 
-        function MiaFunzione (name, surname)
-        {
-            return console.log ("Ciao "+name + " "+surname);
+        function MiaFunzione(name, surname) {
+            return console.log("Ciao " + name + " " + surname);
         }
-        MiaFunzione("gino","verdi");
-
+        MiaFunzione("gino", "verdi");
 
         function Anagrafica(yourName, yourSurname) {
             this.name = yourName;
             this.surname = yourSurname
-            this.info = "Mi chiamo " + this.name + " "+this.surname;
+            this.info = "Mi chiamo " + this.name + " " + this.surname;
             this.showInfo = function () {
                 alert(this.info);
             }
         }
 
-        var person1 = new Anagrafica("Mario","Rossi");
+        var person1 = new Anagrafica("Mario", "Rossi");
 
-        console.log (person1);
-
+        console.log(Object.keys(person1));
+        console.log(person1);
         person1.showInfo();
+        console.log(person1.info);
 
-        console.log (person1.info);
+        function Umano() {
+            this.respira = function () {
+                return console.log("Sono umano e respiro");
+            }
+
+            this.cf ="fgsfhsd";
+        }
+
+        var umano1 = new Umano();
+        console.log (umano1.cf);
+
+
+        Anagrafica.prototype = new Umano();
+
+        var person2 = new Anagrafica("Maria", "Bianchi");
+
+        console.log(Object.keys(person2));
+
+        console.log(Object.keys(umano1));
+
+        person2.showInfo();
+        person2.respira();
+        console.log (person2.cf);
+        console.log (umano1.toString());
+        console.log (person2.toString());
 
     </script>
 </body>
