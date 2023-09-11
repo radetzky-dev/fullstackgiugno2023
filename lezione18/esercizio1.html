@@ -31,6 +31,20 @@
   Variante:
   Piuttosto che avere in input il numero dei giorni del mese passa direttamente il mese e calcola tu da quanti giorni è formato.
     */
+    var daysInMonth = Number(prompt("Da quanti giorni è formato il mese?"));
+        var dayStart = prompt("In che giorno della settimana inizia il mese?");
+        var daysArray = ["Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom"];
+        var risposta = "";
+        var j = daysArray.indexOf(dayStart);
+        console.log(j);
+        
+        for (var i = 1; i < daysInMonth; i++) {
+            j = (j % 7);
+            risposta += daysArray[j] + ' ' + i + '\n';
+            j++;
+            console.log(j);
+        }
+        console.log(risposta);
     </script>
 
 </body>
