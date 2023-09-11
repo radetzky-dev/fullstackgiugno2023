@@ -43,7 +43,7 @@
         console.log(sumWithInitial);
 
 
-        const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+        var animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
         console.log("elementi " + animals.length);
 
         console.log(animals.slice(2));
@@ -88,7 +88,6 @@
 
         console.log(found);
 
-
         const inventory = [
             { name: "apples", quantity: 2 },
             { name: "bananas", quantity: 0 },
@@ -96,11 +95,46 @@
         ];
 
         function isCherries(fruit) {
-            console.log (fruit.quantity);
+            console.log(fruit.quantity);
             return fruit.name === "cherries";
         }
 
         console.log(inventory.find(isCherries));
+
+
+        const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+
+        console.log(beasts.indexOf('bison'));
+        // Expected output: 1
+
+        // Start from index 2
+        console.log(beasts.indexOf('bison', 2));
+        // Expected output: 4
+
+        console.log(beasts.indexOf('giraffe'));
+
+
+        const array13 = [5, 12, 8, 130, 44];
+
+        const isLargeNumber = (element) => element > 6;
+
+        function isLarge(fruit) {
+            return fruit > 6;
+        }
+
+        console.log(array13.findIndex(isLarge));
+        console.log(array13.findIndex(isLargeNumber));
+        // Expected output: 3
+
+        animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
+
+        console.log(animals.indexOf('Dodo'));
+        console.log(animals.lastIndexOf('Dodo'));
+        // Expected output: 3
+
+        console.log(animals.lastIndexOf('Tiger'));
+        console.log(animals.indexOf('Tiger'));
+        // Expected output: 1
 
     </script>
 </body>
