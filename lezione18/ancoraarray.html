@@ -136,6 +136,16 @@
         console.log(animals.indexOf('Tiger'));
         // Expected output: 1
 
+        const isBelowThreshold = (currentValue) => currentValue <= 40;
+
+        const isNumericValue = (currentValue) => !isNaN(currentValue);
+
+        var array14 = [1, 30, 39, 29, 10, 13,40];
+
+        console.log(array14.every(isBelowThreshold));
+        console.log(array14.every(isNumericValue));
+        // Expected output: true
+
     </script>
 </body>
 
