@@ -27,6 +27,7 @@
         console.log("Sommo due valori : " + somma(3, myNum));
         console.log("Calcola elevamento " + myNum + " al quadrato : " + square(myNum));
 
+        var mySquare = square(3);
 
         function setMaker(theObject) {
             theObject.make = "Toyota";
@@ -52,6 +53,64 @@
         console.log(arr[0]); // 45
         myFunc(arr);
         console.log(arr[0]); // 30
+
+        let show = function () {
+            console.log('Anonymous function');
+        };
+        show();
+
+        let show2 = () => console.log('Anonymous function contratta');
+        show2();
+
+        let show3 = (name) => console.log('Anonymous function con parametro. Nome ' + name);
+        show3("Mario");
+
+
+        // The following variables are defined in the global scope
+        const num1 = 20;
+        const num2 = 3;
+        const name = "Chamakh";
+        var num3 = 6;
+
+
+        // This function is defined in the global scope
+        function multiply() {
+            return num1 * num2;
+        }
+
+        console.log(multiply()); // 60
+
+        // A nested function example
+        function getScore() {
+            const num1 = 2;
+            const num2 = 3;
+
+            function add() {
+                return `${name} scored ${num1 + num2}`;
+            }
+            return add();
+        }
+
+        function getTot() {
+            let num2 = 5;
+            return num1 + num2 + num3;
+        }
+
+        console.log(getScore()); // "Chamakh scored 5"
+
+        console.log("Totale " + getTot());
+
+        function ex() {
+            var y = "vedo";
+
+            for (let i = 1; i < 5; i++) {
+                console.log(i + "<-- solo nel ciclo  sempre-> " + y);
+            }
+            console.log("y " + y);
+
+        }
+        ex();
+
 
     </script>
 
