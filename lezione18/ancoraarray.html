@@ -159,13 +159,48 @@
         console.log(array16.includes(2));
         // Expected output: true
 
-        const pets = ['cat', 'dog', 'bat','leone'];
+        const pets = ['cat', 'dog', 'bat', 'leone'];
 
         console.log(pets.includes('leone'));
         // Expected output: true
 
         console.log(pets.includes('at'));
         // Expected output: false
+
+
+        const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+
+        console.log(plants.pop());
+        // Expected output: "tomato"
+
+        console.log(plants);
+        // Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+
+        plants.pop();
+
+        console.log(plants);
+        // Expected output: Array ["broccoli", "cauliflower", "cabbage"]
+
+        const array100 = [1, 2, 3];
+
+        const firstElement = array100.shift();
+
+        console.log(array100);
+        // Expected output: Array [2, 3]
+
+        console.log(firstElement);
+        // Expected output: 1
+
+        animals.push('chickens', 'cats', 'cani');
+        console.log(animals);
+
+        const array101 = [1, 2, 3];
+
+        console.log(array101.unshift(4, 5,6));
+        // Expected output: 5
+
+        console.log(array101);
+        // Expected output: Array [4, 5, 1, 2, 3]
 
     </script>
 </body>
