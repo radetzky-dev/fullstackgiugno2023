@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funzioni</title>
+</head>
+
+<body>
+    <script>
+        function sayHello(yourName) {
+            alert("Hello " + yourName);
+        }
+
+        function somma(a, b) {
+            return a + b;
+        }
+
+        function square(number) {
+            return number * number;
+        }
+
+        sayHello("Paolo");
+        var myNum = 5;
+
+        console.log("Sommo due valori : " + somma(3, myNum));
+        console.log("Calcola elevamento " + myNum + " al quadrato : " + square(myNum));
+
+
+        function setMaker(theObject) {
+            theObject.make = "Toyota";
+        }
+
+        var mycar = {
+            make: "Honda",
+            model: "Accord",
+            year: 1998,
+        };
+
+        console.log(mycar.make); // "Honda"
+        setMaker(mycar);
+        console.log(mycar.make); // "Toyota"
+
+
+        function myFunc(theArr) {
+            theArr[0] = 30;
+        }
+
+        const arr = [45];
+
+        console.log(arr[0]); // 45
+        myFunc(arr);
+        console.log(arr[0]); // 30
+
+    </script>
+
+</body>
+
+</html>
