@@ -74,13 +74,33 @@
         console.log(months);
         // Expected output: Array ["Jan", "Feb", "March", "April", "May"]
 
-        months.splice(5, 0, 'A','B');
+        months.splice(5, 0, 'A', 'B');
 
         console.log(months);
 
         months.splice(1, 1, 'Febbraio');
 
         console.log(months);
+
+        var array12 = [5, 12, 8, 130, 44];
+
+        const found = array12.find((element) => element > 7);
+
+        console.log(found);
+
+
+        const inventory = [
+            { name: "apples", quantity: 2 },
+            { name: "bananas", quantity: 0 },
+            { name: "cherries", quantity: 3 },
+        ];
+
+        function isCherries(fruit) {
+            console.log (fruit.quantity);
+            return fruit.name === "cherries";
+        }
+
+        console.log(inventory.find(isCherries));
 
     </script>
 </body>
