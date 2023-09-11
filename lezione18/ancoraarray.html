@@ -1,14 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ancora Array</title>
 </head>
+
 <body>
     <script>
+        const array1 = ['a', 'b', 'c'];
+        const array2 = ['d', 'e', 'f'];
+        const array3 = array1.concat(array2);
+        console.log(array3);
 
-        
+        const letters = ["a", "b", "c"];
+        const numbers = [1, 2, 3];
+
+        const alphaNumeric = letters.concat(numbers);
+        console.log(alphaNumeric);
+
+
+        const elements = ['Fire', 'Air', 'Water'];
+
+        console.log(elements.join());
+        // Expected output: "Fire,Air,Water"
+
+        console.log(elements.join(''));
+        // Expected output: "FireAirWater"
+
+        console.log(elements.join('-'));
+
+        console.log(elements);
+
+
+        var arrayX = [1, 2, 3, 4, 5];
+
+        // 0 + 1 + 2 + 3 + 4
+        const initialValue = 0;
+        const sumWithInitial = arrayX.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue);
+
+        console.log(sumWithInitial);
+
+
+        const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+        console.log("elementi " + animals.length);
+
+        console.log(animals.slice(2));
+        // Expected output: Array ["camel", "duck", "elephant"]
+
+        console.log(animals.slice(2, 4));
+        // Expected output: Array ["camel", "duck"]
+
+        console.log(animals.slice(1, 5));
+        // Expected output: Array ["bison", "camel", "duck", "elephant"]
+
+        console.log(animals.slice(-2));
+        // Expected output: Array ["duck", "elephant"]
+
+        console.log(animals.slice(2, -1));
+        // Expected output: Array ["camel", "duck"]
+
+        console.log(animals.slice());
+
+        const months = ['Jan', 'March', 'April', 'June'];
+        months.splice(1, 0, 'Feb');
+        // Inserts at index 1
+        console.log(months);
+        // Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+        months.splice(4, 1, 'May');
+        // Replaces 1 element at index 4
+        console.log(months);
+        // Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+
+        months.splice(5, 0, 'A','B');
+
+        console.log(months);
+
+        months.splice(1, 1, 'Febbraio');
+
+        console.log(months);
+
     </script>
 </body>
+
 </html>
