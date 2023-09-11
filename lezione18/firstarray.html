@@ -12,25 +12,82 @@
         const fruits = [];
         fruits.push("banana", "apple", "peach");
         fruits.push("mango");
-        console.log("num elementi array "+fruits.length); 
-        console.log (fruits);
+        console.log("num elementi array " + fruits.length);
+        console.log(fruits);
 
-        var frutta = ['uno','due'];
-        frutta.push ("tre");
-        console.log (frutta);
+        var frutta = ['uno', 'due'];
+        frutta.push("tre");
+        console.log(frutta);
 
         var prova = new Array();
         prova[0] = "primo elemento ha indice zero";
-        prova.push ("secondo valore");
-        console.log (prova);
+        prova.push("secondo valore");
+        console.log(prova);
 
         const listB = new Array(6);
-        console.log("num elementi array "+listB.length); 
-        console.log (listB);
+        console.log("num elementi array " + listB.length);
+        console.log(listB);
         listB[1] = "secondo elemento ha indice uno";
-        console.log (listB);
+        console.log(listB);
         listB[1] = "secondo elemento MODIFICATO";
-        console.log (listB);
+        console.log(listB);
+
+
+        const months = ['March', 'Jan', 'Feb', 'Dec', 'Oct'];
+        months.sort();
+        console.log(months);
+        // Expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+        let array1 = [1, 30, 4, 21, 100000, 3001, 308, 0.5];
+        array1.sort();
+        console.log(array1);
+        // Expected output: Array [1, 100000, 21, 30, 4]
+
+        array1 = ['one', 'two', 'three'];
+        console.log('array1:', array1);
+        // Expected output: "array1:" Array ["one", "two", "three"]
+
+        const reversed = array1.reverse();
+        console.log('reversed:', reversed);
+        // Expected output: "reversed:" Array ["three", "two", "one"]
+
+        // Careful: reverse is destructive -- it changes the original array.
+        console.log('array1:', array1);
+        // Expected output: "array1:" Array ["three", "two", "one"]
+
+        array1 = ['a', 'b', 'c'];
+
+        array1.forEach((element) => console.log(element));
+
+        const ratings = [5, 4, 5];
+        let sum = 0;
+
+        const sumFunction = (a, b) => a + b;
+
+        ratings.forEach((rating) => {
+            console.log("calcolo " + rating);
+            sum = sumFunction(sum, rating);
+        });
+
+        console.log("totale " + sum);
+
+
+        const items = ["item1", "item2", "item3"];
+        const copyItems = [];
+
+        // before
+        for (let i = 0; i < items.length; i++) {
+            copyItems.push(items[i]);
+        }
+
+        console.log(copyItems);
+
+        // after
+        items.forEach((nomequalsiasi) => {
+            copyItems.push(nomequalsiasi);
+        });
+
+        console.log(copyItems);
 
     </script>
 
