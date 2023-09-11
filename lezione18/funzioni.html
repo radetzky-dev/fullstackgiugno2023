@@ -62,7 +62,11 @@
         let show2 = () => console.log('Anonymous function contratta');
         show2();
 
-        let show3 = (name) => console.log('Anonymous function con parametro. Nome ' + name);
+        let show3 = name => 
+        {
+            console.log('Anonymous function con parametro. Nome ' + name);
+            console.log ("Seconda riga id arrow function con parentesi. Senza parentesi per parametro perché singolo");
+        }
         show3("Mario");
 
 
@@ -111,6 +115,60 @@
         }
         ex();
 
+
+        const test = {
+            prop: 42,
+            func: function () {
+                return this.prop;
+            },
+        };
+
+        console.log(test.func());
+
+        function getThis() {
+            return this;
+        }
+
+        const obj1 = { name: "obj1" };
+        const obj2 = { name: "obj2" };
+
+        obj1.getThis = getThis;
+        obj2.getThis = getThis;
+
+        console.log(obj1.getThis()); // { name: 'obj1', getThis: [Function: getThis] }
+        console.log(obj2.getThis());
+
+        function greet() {
+            console.log(this.animal, "typically sleep between", this.sleepDuration);
+        }
+
+        const obj = {
+            animal: "cats",
+            sleepDuration: "12 and 16 hours",
+        };
+
+        greet.call(obj);
+
+
+        // Top-level 'this' is bound to 'globalThis' in scripts.
+        this.x = 9;
+        const module = {
+            x: 81,
+            getX() {
+                return this.x;
+            },
+        };
+
+        // The 'this' parameter of 'getX' is bound to 'module'.
+        console.log(module.getX()); // 81
+
+        const retrieveX = module.getX;
+        // The 'this' parameter of 'retrieveX' is bound to 'globalThis' in non-strict mode.
+        console.log(retrieveX()); // 9
+
+        // Create a new function 'boundGetX' with the 'this' parameter bound to 'module'.
+        const boundGetX = retrieveX.bind(module);
+        console.log(boundGetX()); // 81
 
     </script>
 
