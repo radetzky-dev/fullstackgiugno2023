@@ -31,11 +31,19 @@
         var s1 = "€ 10,45";
         var s2 = "11.38";
         var s3 = "11;345";
+        var s4= "ciao mondo";
+
+        console.log(s1 + " Non è numerico? " + isNaN(s1));
+        console.log(s2 + " Non è numerico? " + isNaN(s2));
+        console.log(s4 + " Non è numerico? " + isNaN(s4));
 
         s1 = normalizeNum(s1);
 
         console.log(Number.parseInt(s1));
         console.log(Number.parseInt(s2));
+
+        console.log(s1 + " Numerico? " + Number.isNaN(s1));
+        console.log(s2 + " Numerico? " + Number.isNaN(s2));
 
         s3 = normalizeNum(s3);
 
