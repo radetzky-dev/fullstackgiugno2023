@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stringhe</title>
+</head>
+
+<body>
+    <script>
+        var myString = "hello world";
+
+        //la stringa parte da zero come numerazione
+        var sentence = 'The quick brown fox jumps over the lazy dog.';
+
+        const index = 4;
+
+        console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
+
+
+        var str1 = 'Hello';
+        var str2 = 'World';
+
+        console.log(str1.concat(' ', str2));
+        // Expected output: "Hello World"
+
+        console.log(str2.concat(', ', str1));
+        // Expected output: "World, Hello"
+
+        var str3 = str1 + " " + str2;
+        console.log(str3);
+
+        str1 = 'Cats are the best!';
+
+        console.log(str1.endsWith('best!'));
+        // Expected output: true
+
+        console.log(str1.endsWith('best', 17));
+        // Expected output: true
+
+        str2 = 'Is this a question?';
+        console.log(str2.endsWith('question?'));
+
+        str1 = 'Saturday night plans';
+
+        console.log(str1.startsWith('Sat'));
+        // Expected output: true
+
+        sentence = 'The quick brown fox jumps over the lazy dog.';
+
+        const word = 'fox';
+
+        console.log(`The word "${word}" ${sentence.includes(word) ? 'is' : 'is not'} in the sentence`);
+        // Expected output: "The word "fox" is in the sentence"
+
+        const paragraph = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
+
+        const searchTerm = 'dog';
+        const indexOfFirst = paragraph.indexOf(searchTerm);
+
+        console.log(`The index of the first "${searchTerm}" from the beginning is ${indexOfFirst}`);
+        // Expected output: "The index of the first "dog" from the beginning is 40"
+
+        console.log(`The index of the 2nd "${searchTerm}" is ${paragraph.indexOf(searchTerm, indexOfFirst + 1)}`);
+        // Expected output: "The index of the 2nd "dog" is 52"
+
+        console.log(`The index of the first "${searchTerm}" from the end is ${paragraph.lastIndexOf(searchTerm)}`);
+// Expected output: "The index of the first "dog" from the end is 52"
+
+
+
+
+    </script>
+</body>
+
+</html>
