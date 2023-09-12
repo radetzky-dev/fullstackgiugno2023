@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <table id="outside">
         <tr>
@@ -16,11 +17,29 @@
         </tr>
     </table>
 
+    <h2>Modulo di iscrizione</h2>
+    <div id="prova">
+
+    </div>
+
     <script>
+
+        alert("ciao mondo");
+        var message = "Vuoi fare questo?"
+        var result = window.confirm(message);
+        console.log(result);
+
+        result = window.prompt(message, "Scrivi la tua risposta");
+        console.log(result);
+        //stringhe funzione
+
+        var element = document.getElementById("prova");
+        element.innerHTML = "<p>" + result + "</p>";
+
         function modifyText() {
             const t2 = document.getElementById("t2");
             const isNodeThree = t2.firstChild.nodeValue === "three";
-            console.log (isNodeThree);
+            console.log(isNodeThree);
             t2.firstChild.nodeValue = isNodeThree ? "two" : "three";
         }
 
