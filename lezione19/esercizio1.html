@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div id="id1">
         <p id="para1">Dato il codice html riportato qui a fianco, si vuole
             sostituire il primo paragrafo all’interno del div id1, con un heading h2 contente il testo: Welcome!</p>
-        <p id="para2">DUE Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam asperiores quam illum cum cupiditate iste officiis dolor, doloremque provident consequuntur, adipisci explicabo enim modi dignissimos voluptatum quasi? Exercitationem, totam praesentium.</p>
+        <p id="para2">DUE Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam asperiores quam illum cum
+            cupiditate iste officiis dolor, doloremque provident consequuntur, adipisci explicabo enim modi dignissimos
+            voluptatum quasi? Exercitationem, totam praesentium.</p>
         <input id="btn" value="Replace element" type="button">
+        <input id="btn2" value="Replace Child" type="button">
     </div>
+
+    <script>
+        function onClickEventHandler(e) {
+
+            //STEP 1 seleziono e cancello il primo P
+            const firstP = document.getElementById("para1");
+            firstP.remove(); //Cancello elemento
+
+            //STEP 2 creo un elemento h3 col suo testo
+            const h3elem = document.createElement('h3');
+            const h3Text = document.createTextNode("Welcome");
+            h3elem.appendChild(h3Text);
+
+            //STEP 3 selezione il secondo P e incollo il mio elemento al suo livello
+            const secondP = document.getElementById("para2");
+            secondP.insertAdjacentElement('beforebegin', h3elem);
+
+        }
+
+        function colReplaceChild() {
+            const firstP = document.getElementById("para1");
+            const h2elem = document.createElement('h2');
+            h2elem.textContent = "cambiato!";
+            const parentDiv = firstP.parentNode;
+            parentDiv.replaceChild(h2elem, firstP);
+        }
+
+
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", onClickEventHandler);
+
+        const btn2 = document.getElementById("btn2");
+        btn2.addEventListener("click", colReplaceChild);
+    </script>
 </body>
+
 </html>
