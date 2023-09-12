@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <style>
+        .container {
+            display: flex;
+            gap: 0.5rem;
+            flex-direction: column;
+        }
+
+        button {
+            width: 200px;
+        }
+
+        .story {
+            color: blue;
+        }
+    </style>
+    <script>
+        // run this function when the document is loaded
+        window.onload = () => {
+            console.log("Pagina caricata...");
+            // create a couple of elements in an otherwise empty HTML page
+            const heading = document.createElement("h1");
+            const headingText = document.createTextNode("Ciao Mondo");
+            heading.appendChild(headingText);
+            window.document.body.appendChild(heading);
+        };
+
+    
+    </script>
+
+</head>
+
+<body>
+    <h2>Questa è la pagina prima del JS</h2>
+    <img src="../gelateria/assets/crema.jpg" width="200px" alt="text">
+    <input type="text" name="valore">
+    <button>Calcola rata mutuo</button>
+
+
+</body>
+
+</html>
