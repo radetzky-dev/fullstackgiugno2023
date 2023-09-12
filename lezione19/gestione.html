@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gestione</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        console.log("Programma inizia");
+        let name = "prova";
+
+        function myTest(name) {
+            alert(name);
+        }
+
+        myTest(name);
+
+        var x = 12;
+        //debugger;
+
+        try {
+            console.log("qui ok");
+            nonExistentFunction();
+
+        } catch (error) {
+            console.error(error);
+            console.log("ATTENZIONE LA FUNZIONE NON ESISTE ne chiamo un'altra...");
+        }
+
+        console.log("Programma continua");
+    </script>
+
+</body>
+
+</html>
