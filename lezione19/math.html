@@ -13,12 +13,34 @@
             return Math.floor(Math.random() * max);
         }
 
+function normalizeNum(num)
+{
+    num= num.replace(",", ".");
+    num = num.replace(";", ".");
+    return num;
+}
+
         var maxNum = 81;
         console.log("il numero casuale è " + getRandomInt(maxNum));
         // Expected output: 0, 1 or 2
 
         console.log(getRandomInt(1));
         // Expected output: 0
+
+        var s1= "10,45";
+        var s2= "11.38";
+        var s3= "11;345";
+
+        console.log (Number.parseInt(s1));
+        console.log (Number.parseInt(s2));
+
+        s1= normalizeNum(s1);
+        s3= normalizeNum(s3);
+
+        console.log ("Dopo replace "+s1);
+        console.log (Number.parseFloat(s1));
+        console.log (Number.parseFloat(s2));
+        console.log (Number.parseFloat(s3));
 
     </script>
 </body>
