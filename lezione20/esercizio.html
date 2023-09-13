@@ -12,7 +12,7 @@
         Generare una lista di link a partire da un elenco di articoli presenti nel codice html
     -->
     <h1>The Extremadura Region of Western Spain</h1>
-    <article id="item-1">
+    <article id="pippo-1">
         <h2>Geography Of The Region</h2>
         <p>The autonomous community of Extremadura is in western Spain alongside the
             Portuguese border. It borders the Spanish regions of Castilla y Leon, Castilla La
@@ -68,7 +68,7 @@
         {
             const itemsNum = [];
             for (let i = 0; i < list.length; i++) {
-                console.log("Item "+list.item(i).getAttribute("id"));
+                console.log("Link attributo: "+list.item(i).getAttribute("id"));
                 itemsNum.push(list.item(i).getAttribute("id"));
             }
             return itemsNum;
