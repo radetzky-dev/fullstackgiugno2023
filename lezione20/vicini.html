@@ -10,6 +10,8 @@
 <body>
     <div id="div-1">Here is div-1</div>
     <div id="div-2">Here is div-2</div>
+    <p id="testo">ciao mondo</p>
+    <p id="source">valore source</p>
     <br />
     <output><em>Not calculated.</em></output>
 
@@ -23,6 +25,18 @@
         console.log(document.getElementById("div-2").previousSibling); 
         let el = document.getElementById("div-1").nextSibling;
         console.log (el);
+
+        console.log ( document.getElementById("div-1").firstChild.nodeValue);
+        console.log ( document.getElementById("div-1").nodeName);
+        console.log ( document.getElementById("div-1").firstChild.nodeName);
+        console.log ( document.getElementById("div-2").firstChild.nodeValue);
+        console.log ( document.getElementById("testo").firstChild.nodeValue);
+        document.getElementById("testo").firstChild.nodeValue = "Hello world";
+        document.getElementById("testo").style.color="blue";
+
+        document.getElementById("testo").innerHTML ="ricambio";
+
+        document.getElementById("source").innerHTML="ho cambiato valore";
 
         let i = 1;
 
