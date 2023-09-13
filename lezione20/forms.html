@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <form id="robby">
+        <input type="button" onclick="alert(document.forms[0].id);" value="robby's form" />
+    </form>
+
+    <form id="dave">
+        <input type="button" onclick="alert(document.forms[1].id);" value="dave's form" />
+    </form>
+
+    <form id="paul">
+        <input type="button" onclick="alert(document.forms[2].id);" value="paul's form" />
+    </form>
+
+    <button onclick="history.back()">Vai alla pagina precedente</button>
+    <button onclick="history.go(-3)">Vai a 3 pagine fa</button>
+
+
+    <script>
+        let nome,cognome, indirizzo, city;
+
+        function anagrafica()
+        {
+            let anagrafica = ["mario", "rossi", "via roma,3" , "marinella di sestri"];
+            return anagrafica;
+        }
+
+        [nome,cognome, indirizzo, city] = anagrafica();
+        console.log ("Nome "+nome);
+
+        console.log ("Hai visitato "+history.length + " pagine");
+        console.log ("Browser "+ navigator.userAgent);
+        console.log ("Lingua "+ navigator.language);
+        console.log ("Schermo w "+ window.screen.width);
+        console.log ("hostname "+ location.host);
+        const selectForm = document.forms[0];
+        console.log(selectForm);
+        const selectFormElement = document.forms[1].elements[0].nodeName;
+        console.log(selectFormElement);
+    </script>
+</body>
+
+</html>
