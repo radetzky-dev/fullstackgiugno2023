@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+    <div>
+        <span id="childSpan">prova</span>
+    </div>
+
+    <h2>Scompare</h2>
+    <div id="top">
+        <div id="nested">TESTO</div>
+        <p>Resta</p>
+    </div>
+
+    <script>
+        const sp1 = document.createElement("span");
+
+        // Give it an id attribute called 'newSpan'
+        sp1.id = "newSpan";
+
+        // Create some content for the new element.
+        const sp1_content = document.createTextNode("new replacement span element.");
+
+        // Apply that content to the new element
+        sp1.appendChild(sp1_content);
+
+        // Build a reference to the existing node to be replaced
+        const sp2 = document.getElementById("childSpan");
+        const parentDiv = sp2.parentNode;
+
+        // Replace existing node sp2 with the new span element sp1
+        parentDiv.replaceChild(sp1, sp2);
+
+        let d = document.getElementById("top");
+        let d_nested = document.getElementById("nested");
+        let throwawayNode = d.removeChild(d_nested);
+    </script>
+</body>
+
+</html>
