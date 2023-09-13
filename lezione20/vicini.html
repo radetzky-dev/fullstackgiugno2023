@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div-1">Here is div-1</div>
+    <div id="div-2">Here is div-2</div>
+    <br />
+    <output><em>Not calculated.</em></output>
+
+    <img id="b0" /><img id="b1" /><img id="b2" />
+
+    <script>
+
+        console.log(document.getElementById("b1").previousSibling); // <img id="b0">
+        console.log(document.getElementById("b2").previousSibling.id); // "b1"
+
+        console.log(document.getElementById("div-2").previousSibling); 
+        let el = document.getElementById("div-1").nextSibling;
+        console.log (el);
+
+        let i = 1;
+
+        let result = "Siblings of div-1:<br/>";
+
+        while (el) {
+            result += `${i}. ${el.nodeName}<br/>`;
+            el = el.nextSibling;
+            i++;
+        }
+
+        const output = document.querySelector("output");
+        output.innerHTML = result;
+    </script>
+</body>
+
+</html>
