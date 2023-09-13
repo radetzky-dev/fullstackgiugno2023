@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1">The text above has been created dynamically.</div>
+
+    <p id="para1">cioa</p>
+
+    <script>
+
+        let div = document.createElement("div");
+        let p1 = document.createElement("p");
+        const newContent = document.createTextNode("dentro a p1");
+        // add the text node to the newly created div
+        p1.appendChild(newContent);
+        let span = document.createElement("span");
+        div.append(p1);
+        div.prepend(span);
+
+        console.log(div.childNodes);
+
+
+
+        p = document.getElementById("para1");
+        let p_prime = p.cloneNode(true);
+        document.body.insertBefore(p_prime, p);
+
+        document.body.insertBefore(div, p);
+
+        document.body.onload = addElement;
+
+        function addElement() {
+            // create a new div element
+            const newDiv = document.createElement("div");
+
+            // and give it some content
+            const newContent = document.createTextNode("Hi there and greetings INSERITO PRIMA!");
+
+            // add the text node to the newly created div
+            newDiv.appendChild(newContent);
+
+            // add the newly created element and its content into the DOM
+            const currentDiv = document.getElementById("div1");
+            document.body.insertBefore(newDiv, currentDiv);
+        }
+    </script>
+</body>
+
+</html>
