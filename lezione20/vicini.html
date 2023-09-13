@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <p class="provaclasse">prova</p>
     <div id="div-1">Here is div-1</div>
     <div id="div-2">Here is div-2</div>
     <p id="testo">ciao mondo</p>
@@ -15,28 +16,69 @@
     <br />
     <output><em>Not calculated.</em></output>
 
+    <div id="div6" name="ciao">Hi Champ!</div>
+
     <img id="b0" /><img id="b1" /><img id="b2" />
 
+    <div id="div4" style="border: solid red 3px">
+        <p>Some div2 text</p>
+        <p>Some div2 text</p>
+    </div>
+
+    <section class="box" id="sect1">
+        <div class="funnel-chart-percent1">10.900%</div>
+        <div class="funnel-chart-percent2">3700.00%</div>
+        <div class="funnel-chart-percent3">0.00%</div>
+      </section>
+
     <script>
+        console.log ("Nome img "+document.body.querySelector("img").nodeName);
+
+        var lista = document.body.querySelectorAll(`[class*="funnel-chart-percent"]`);
+        console.log (lista.length);
+        //=> <div id="div1">Hi Champ!</div>
+
+        console.log("attributo name di div6 " + document.getElementById("div6").getAttribute("name"));
+
+        const allPa = document.getElementsByClassName("provaclasse");
+
+        console.log(allPa[0].nodeName);
+        for (const singlePa of allPa) {
+            console.log("solo una " + singlePa.nodeName);
+        }
+
+
+        const allP = document.getElementsByTagName("p");
+
+        console.log("Il secondo p " + allP[1].nodeName);
+        for (const singleP of allP) {
+            console.log(singleP.nodeName);
+        }
+
+        const div4 = document.getElementById("div4");
+        const div2Paras = div4.getElementsByTagName("p");
+        const num = div2Paras.length;
+        alert(`There are ${num} paragraph in #div4`);
+
 
         console.log(document.getElementById("b1").previousSibling); // <img id="b0">
         console.log(document.getElementById("b2").previousSibling.id); // "b1"
 
-        console.log(document.getElementById("div-2").previousSibling); 
+        console.log(document.getElementById("div-2").previousSibling);
         let el = document.getElementById("div-1").nextSibling;
-        console.log (el);
+        console.log(el);
 
-        console.log ( document.getElementById("div-1").firstChild.nodeValue);
-        console.log ( document.getElementById("div-1").nodeName);
-        console.log ( document.getElementById("div-1").firstChild.nodeName);
-        console.log ( document.getElementById("div-2").firstChild.nodeValue);
-        console.log ( document.getElementById("testo").firstChild.nodeValue);
+        console.log(document.getElementById("div-1").firstChild.nodeValue);
+        console.log(document.getElementById("div-1").nodeName);
+        console.log(document.getElementById("div-1").firstChild.nodeName);
+        console.log(document.getElementById("div-2").firstChild.nodeValue);
+        console.log(document.getElementById("testo").firstChild.nodeValue);
         document.getElementById("testo").firstChild.nodeValue = "Hello world";
-        document.getElementById("testo").style.color="blue";
+        document.getElementById("testo").style.color = "blue";
 
-        document.getElementById("testo").innerHTML ="ricambio";
+        document.getElementById("testo").innerHTML = "ricambio";
 
-        document.getElementById("source").innerHTML="ho cambiato valore";
+        document.getElementById("source").innerHTML = "ho cambiato valore";
 
         let i = 1;
 
