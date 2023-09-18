@@ -1,3 +1,8 @@
+export default function createPerson ()
+{
+    return "Mario Rossi";
+}
+
 function helloWorld()
 {
     console.log ("ciao mondo");
@@ -5,5 +10,18 @@ function helloWorld()
 
 const foo = Math.PI + Math.SQRT2;
 
-export { helloWorld, foo };
+class Car {
+    constructor(name, year) {
+      this.name = name;
+      this.year = year;
+    }
+
+    cosaGuidi()
+    {
+        return this.name + " del "+this.year;
+    }
+  }
+
+
+export { Car, helloWorld, foo };
 
