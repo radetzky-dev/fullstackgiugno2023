@@ -16,7 +16,9 @@
 
         const myRequest = new Request("assets/mini.jpg");
 
-        fetch(myRequest)
+        const image = 'https://images2.corriereobjects.it/methode_image/2023/09/18/Milano/Foto%20Milano%20-%20Trattate/d79b21e1145fd66edce2965801890077-kBjC--304x232@Corriere-Web-Nazionale.jpg?v=202309181306';
+
+        fetch(image)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status} immagine non trovata`);

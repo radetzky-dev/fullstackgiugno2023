@@ -46,7 +46,7 @@
                 elmDisplay.append(p);
                 this.interval = setInterval(() => {
                     p.innerHTML += ".";
-                }, 100);
+                }, 5000);
             }
             this.unset = () => {
                 elmDisplay.removeChild(p);
@@ -67,6 +67,7 @@
                 console.log(response);
 
                 if (response.status !== 200) {
+                    console.log ("Immagine non trovata")
                     throw new Error("response ko");
                 }
                 let p = document.createElement("p");
