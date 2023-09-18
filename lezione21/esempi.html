@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const city = { cityname: "Rome"};
+        const person = { surname: "Susi", age:29, city};
+        const employee = { ...person, salary: 10000};
+        console.log (employee);
+        console.log (employee.surname);
+        console.log (employee.city.cityname);
+    </script>
+</body>
+</html>
