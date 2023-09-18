@@ -4,11 +4,42 @@
 <head>
     <meta charset="utf-8">
     <title>Modulo</title>
-    <script type="module" src="main.js"></script>
+    <!--  <script type="module" src="main.js"></script> -->
+
+    <script type="module">
+        import createPerson, { Car, helloWorld, foo } from "./modules/prova.js";
+        import { CreateAnyElement } from "./modules/createElement.js";
+
+        console.log(foo);
+        helloWorld();
+
+        const persona = createPerson();
+        console.log("Io mi chiamo " + persona);
+
+        const myCar1 = new Car("Ford", 2014);
+        const myCar2 = new Car("Fiat", 2010);
+        console.log("Guido una " + myCar1.cosaGuidi());
+        console.log("Guido una " + myCar2.cosaGuidi());
+
+        const pElem = new CreateAnyElement({ elementType: "p", id: "first-par", elementText: "hello world" });
+        pElem.createElement();
+
+        const h3Elem = new CreateAnyElement({ elementType: "h3", id: "first-par", elementText: "nuovo titolo " });
+        h3Elem.createElement();
+
+        /*
+        const h1Elem = document.getElementById("head");
+        h1Elem.append(pElem);
+*/
+
+
+    </script>
+
+
 </head>
 
 <body>
-    <h1>Esempi</h1>
+    <h1 id="head">Esempi</h1>
 </body>
 
 </html>
