@@ -46,7 +46,7 @@
                 elmDisplay.append(p);
                 this.interval = setInterval(() => {
                     p.innerHTML += ".";
-                }, 5000);
+                }, 100);
             }
             this.unset = () => {
                 elmDisplay.removeChild(p);
@@ -96,12 +96,13 @@
 
                 // IN CASO DI ERRORE DI OGNI PROMISE
 
-                alert(error.message);
+                console.log("ERRORE "+ error.message);
                 loadingEffect.unset();
                 blobLoadingEffect.unset();
             })
             .finally(() => {
                 // ALLA FINE..
+                console.log ("Ho terminato le operazioni");
             });
 
         //
