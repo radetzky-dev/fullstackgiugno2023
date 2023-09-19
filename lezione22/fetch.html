@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>My dog</h2>
+    <img src="https://dummyimage.com/300" id="myDogPhoto" alt="dog">
+    <script>
+        //API
+        // https://dog.ceo/api/breeds/image/random
+        // https://api.artic.edu/api/v1/artworks/search?q=cats
+
+        var myApi= "https://dog.ceo/api/breeds/image/random";
+    
+        async function getDog() {
+            const response = await fetch(myApi);
+            console.log("Response "+response.status);
+            const dog = await response.json();
+            return dog;
+        }
+        
+
+        console.log ("Chiamo API e ottengo una foto random di cane...");
+        var myDog = getDog();
+        
+        myDog.then(function (okResolve) {
+            console.log("La foto richiesta è " + okResolve.message);
+            console.log("Status " + okResolve.status);
+            document.getElementById("myDogPhoto").src=okResolve.message;
+            
+        }).catch(function (koRej) {
+            console.log("Qualcosa è andato storto " + koRej);
+        });
+  
+    </script>
+
+</body>
+
+</html>
