@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Curreny</h2>
+
+    <script>
+        
+        var myApi= "https://api.coinbase.com/v2/currencies";
+    
+    async function getCurrency() {
+        const response = await fetch(myApi);
+        const currency = await response.json();
+        console.log (currency.data);
+        return currency;
+    }
+
+    var currency = getCurrency();
+        
+    currency.then(function (okResolve) {
+            console.log("La foto richiesta è " + okResolve.data);
+            document.getElementById("myDogPhoto").src=okResolve.data;
+            
+        }).catch(function (koRej) {
+            console.log("Qualcosa è andato storto " + koRej);
+        });
+
+    </script>
+</body>
+</html>
