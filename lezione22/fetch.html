@@ -15,6 +15,8 @@
         // https://dog.ceo/api/breeds/image/random
         // https://api.artic.edu/api/v1/artworks/search?q=cats
 
+        //https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/
+
         var myApi= "https://dog.ceo/api/breeds/image/random";
     
         async function getDog() {
@@ -23,7 +25,7 @@
             const dog = await response.json();
             return dog;
         }
-        
+
 
         console.log ("Chiamo API e ottengo una foto random di cane...");
         var myDog = getDog();
