@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const json = '{"result":true, "count":42, "pippo": { "vario": { "release_date": "2004-11-09", "status": "retired" }}}';
+        const obj = JSON.parse(json);
+
+        console.log (obj);
+
+        console.log(obj.count);
+        // Expected output: 42
+
+        console.log(obj.result);
+
+        console.log(obj.pippo.vario.status);
+        // Expected output: true
+
+        var myArray =[ "1", "pippo", true, "piero", 81 ];
+        
+        var myJson = JSON.stringify(myArray);
+
+        console.log(myJson);
+
+    </script>
+</body>
+
+</html>
