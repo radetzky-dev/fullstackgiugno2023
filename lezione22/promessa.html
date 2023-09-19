@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <h2> Javascript Promise</h2>
+    </br>
+</head>
+
+<body>
+    <script>
+        var p = new Promise(function (ok, ko) {
+            var x = 2 + 3;
+            if (x == 5)
+                ok(" executed and resolved successfully");
+            else
+                ko("rejected");
+        });
+        p.then(function (okResolve) {
+            document.write("Promise is" + okResolve);
+        }).catch(function (koRej) {
+            document.write("Promise is " + koRej);
+        });
+    </script>
+</body>
+
+</html>
