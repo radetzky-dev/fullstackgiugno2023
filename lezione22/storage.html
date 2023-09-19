@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Storage</h1>
+    <script>
+        console.log ("salvo nel browser TOM");
+        localStorage.setItem("myCat", "Tom");
+
+        const cat = localStorage.getItem("myCat");
+        console.log ("leggo "+cat);
+
+        localStorage.removeItem("myCat");
+
+        const cat2 = localStorage.getItem("myCat");
+
+        console.log ("leggo "+cat2);
+
+    </script>
+</body>
+
+</html>
