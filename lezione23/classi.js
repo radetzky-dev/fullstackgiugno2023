@@ -59,8 +59,60 @@ var Programmer = /** @class */ (function (_super) {
 }(Person));
 var developer = new Programmer("Sergio", true, "sergio@e.com", 1, [
     "javascript",
-    "php", "java", "c#"
+    "php",
+    "java",
+    "c#",
 ]);
 console.log("My name is " + developer.name);
 developer.sayMyName();
 developer.getLanguages();
+var kv1 = { key: 1, value: "Steve" }; // OK
+console.log(kv1.value + " " + kv1.key);
+function addKeyValue(key, value) {
+    console.log("addKeyValue: key = " + key + ", value = " + value);
+}
+function updateKeyValue(key, value) {
+    console.log("updateKeyValue: key = " + key + ", value = " + value);
+}
+var kvp = addKeyValue;
+kvp(1, "Bill"); //Output: addKeyValue: key = 1, value = Bill
+kvp = updateKeyValue;
+kvp(2, "Steve"); //Output: updateKeyValue: key = 2, value = Steve
+var empObj = {
+    empCode: 6,
+    name: "Bill",
+    gender: "Male",
+};
+console.log(empObj.name + " " + empObj.empCode);
+var Employee = /** @class */ (function () {
+    function Employee(code, name) {
+        this.salary = 0;
+        this.empCode = code;
+        this.name = name;
+    }
+    Employee.prototype.setSalary = function (codiceImpiegato, salarioImpiegato) {
+        if (codiceImpiegato === this.empCode) {
+            this.salary = salarioImpiegato;
+        }
+    };
+    Employee.prototype.getSalary = function (codiceImpiegato) {
+        var localSalary = 0;
+        if (codiceImpiegato === this.empCode) {
+            return this.salary;
+        }
+        else {
+            console.log("Salario sconosciuto per code " + codiceImpiegato);
+        }
+        return localSalary;
+    };
+    return Employee;
+}());
+var emp = new Employee(1, "Steve");
+console.log("Setto salario per  " + emp.name);
+emp.setSalary(1, 50000);
+console.log("Il tuo salario " + emp.getSalary(1));
+var emp2 = new Employee(3, "Mario");
+console.log("Setto salario per " + emp2.name);
+emp2.setSalary(3, 15000);
+console.log("Il tuo salario " + emp2.getSalary(3));
+console.log("Il tuo salario " + emp2.getSalary(6));

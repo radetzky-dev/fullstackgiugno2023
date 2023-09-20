@@ -44,7 +44,7 @@ class Programmer extends Person {
 
     for (let index in this.programmingLanguages) {
       console.log(index);
-      console.log(this.programmingLanguages[index]); 
+      console.log(this.programmingLanguages[index]);
     }
 
     for (let language of this.programmingLanguages) {
@@ -55,9 +55,100 @@ class Programmer extends Person {
 
 const developer = new Programmer("Sergio", true, "sergio@e.com", 1, [
   "javascript",
-  "php", "java", "c#"
+  "php",
+  "java",
+  "c#",
 ]);
 
 console.log("My name is " + developer.name);
 developer.sayMyName();
 developer.getLanguages();
+
+interface KeyPair {
+  key: number;
+  value: string;
+}
+
+let kv1: KeyPair = { key: 1, value: "Steve" }; // OK
+
+console.log(kv1.value + " " + kv1.key);
+
+interface KeyValueProcessor {
+  (key: number, value: string): void;
+}
+
+function addKeyValue(key: number, value: string): void {
+  console.log("addKeyValue: key = " + key + ", value = " + value);
+}
+
+function updateKeyValue(key: number, value: string): void {
+  console.log("updateKeyValue: key = " + key + ", value = " + value);
+}
+
+let kvp: KeyValueProcessor = addKeyValue;
+kvp(1, "Bill"); //Output: addKeyValue: key = 1, value = Bill
+
+kvp = updateKeyValue;
+kvp(2, "Steve"); //Output: updateKeyValue: key = 2, value = Steve
+
+interface IPerson {
+  name: string;
+  gender: string;
+}
+
+interface IEmployee extends IPerson {
+  empCode: number;
+}
+
+let empObj: IEmployee = {
+  empCode: 6,
+  name: "Bill",
+  gender: "Male",
+};
+
+console.log(empObj.name + " " + empObj.empCode);
+
+interface IEmployee {
+  empCode: number;
+  name: string;
+  getSalary: (empCode: number) => number;
+}
+
+class Employee implements IEmployee {
+  empCode: number;
+  name: string;
+  salary: number = 0;
+
+  constructor(code: number, name: string) {
+    this.empCode = code;
+    this.name = name;
+  }
+
+  setSalary(codiceImpiegato: number, salarioImpiegato: number): void {
+    if (codiceImpiegato === this.empCode) {
+      this.salary = salarioImpiegato;
+    }
+  }
+
+  getSalary(codiceImpiegato: number): number {
+    let localSalary: number = 0;
+    if (codiceImpiegato === this.empCode) {
+      return this.salary;
+    } else {
+      console.log("Salario sconosciuto per code " + codiceImpiegato);
+    }
+    return localSalary;
+  }
+}
+
+let emp = new Employee(1, "Steve");
+console.log("Setto salario per  " + emp.name);
+emp.setSalary(1, 50000);
+console.log("Il tuo salario " + emp.getSalary(1));
+
+let emp2 = new Employee(3, "Mario");
+console.log("Setto salario per " + emp2.name);
+emp2.setSalary(3, 15000);
+console.log("Il tuo salario " + emp2.getSalary(3));
+
+console.log("Il tuo salario " + emp2.getSalary(6));
