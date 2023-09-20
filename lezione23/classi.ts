@@ -9,7 +9,7 @@ class Person {
   sayMyName() {
     console.log("Sono cool? " + this.isCool);
     console.log(`Your not Heisenberg, you're ${this.name}`);
-    this.email ="nuova@mail.com";
+    this.email = "nuova@mail.com";
     console.log("Mail ? " + this.email);
   }
 }
@@ -21,3 +21,34 @@ person1.pets = 7;
 
 person1.sayMyName();
 console.log("Numero animali " + person1.pets);
+
+class Programmer extends Person {
+  programmingLanguages: string[];
+
+  constructor(
+    name: string,
+    isCool: boolean,
+    email: string,
+    pets: number,
+    pL: string[]
+  ) {
+    // La chiamata a super deve fornire tutti i parametri per il costruttore base (quello della classe Person), in quanto il costruttore non viene ereditato.
+    super(name, isCool, email, pets);
+    this.programmingLanguages = pL;
+  }
+
+  getLanguages(): void {
+    for (let language of this.programmingLanguages) {
+      console.log("Programmo in " + language);
+    }
+  }
+}
+
+const developer = new Programmer("Sergio", true, "sergio@e.com", 1, [
+  "javascript",
+  "php",
+]);
+
+console.log("My name is " + developer.name);
+developer.sayMyName();
+developer.getLanguages();
