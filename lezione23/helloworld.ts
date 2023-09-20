@@ -12,27 +12,53 @@ console.log(message);
 function myLog(s: string) : void
 {
     console.log ("Scrivo nel log "+s);
-    let result: number = calcola (9,4);
-    console.log ("Result "+result);
+  
 }
 
 
-function calcola(x: number, y: number) : number
+function calcola(x: number, y: number) 
 {
     return x+y;
 }
 
-let risultato: boolean = true;
+let risultato: number;
 
-risultato = calcola(7,5);
+  risultato = calcola(7,5);
+  console.log ("risultato "+ risultato);
+
+
+  const a: unknown = 11;
+
+if (typeof a === 'number') {
+ console.log ("numero "+a)
+}
 
 console.log (typeof(risultato));
 myLog("ciao");
 
 console.log ("Risultato "+risultato);
 
+let qualsiasi : any = "10";
+console.log (typeof(qualsiasi));
+qualsiasi = 10;
+qualsiasi = [7,21,46];
+
+console.log (typeof(qualsiasi));
+console.log (qualsiasi[0]);
 
 
+// Definisce una funzione chiamata circle che ottiene una variabile di tipo number e ritorna un valore di tipo string
+function circle(diam: number): string {
+    return 'The circumference is ' + Math.PI * diam;
+  }
+  
+  console.log(circle(10)); 
+
+  const circle2 = (diam: number, raggio: number): string => {
+    return 'Raggio '+ raggio+ ' circonferenza è ' + Math.PI * diam;
+  };
+  
+  console.log(circle2(10,5));
 
 /*
 Installazione nella cartella
