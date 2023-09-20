@@ -154,3 +154,18 @@ emp2.setSalary(3, 15000);
 console.log("Il tuo salario " + emp2.getSalary(3));
 
 console.log("Il tuo salario " + emp2.getSalary(6));
+
+function isString(mioParametro: any) : mioParametro is string {
+    return typeof mioParametro === "string";
+}
+
+let miaStringa: string ="ciao";
+let mioNumero: number = 81;
+
+console.log (miaStringa + " è stringa? "+isString(miaStringa));
+console.log (mioNumero + " è stringa? "+isString(mioNumero));
+
+if (isString(miaStringa))
+{
+    console.log ("Scrivo un testo");
+}
