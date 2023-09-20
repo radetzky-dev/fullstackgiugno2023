@@ -70,7 +70,7 @@ console.log(add(3, 2));
 
 class Person {
   name: string;
-  isCool: boolean;
+  public isCool: boolean;
   pets: number;
   age: number;
 
@@ -95,6 +95,7 @@ const person2 = new Person("Sarah", true, 6,28); // ERRORE: Argomento di tipo 's
 
 console.log(person1.sayHello());
 console.log(person2.sayHello());
+console.log(person2.isCool);
 console.log ("Ho "+person2.myAge() +" anni");
 
 let People: Person[] = [person1, person2];
