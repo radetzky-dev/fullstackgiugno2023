@@ -96,6 +96,7 @@ interface IPerson {
   gender: string;
 }
 
+/*
 interface IEmployee extends IPerson {
   empCode: number;
 }
@@ -107,6 +108,7 @@ let empObj: IEmployee = {
 };
 
 console.log(empObj.name + " " + empObj.empCode);
+*/
 
 interface IEmployee {
   empCode: number;

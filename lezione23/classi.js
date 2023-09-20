@@ -78,12 +78,6 @@ var kvp = addKeyValue;
 kvp(1, "Bill"); //Output: addKeyValue: key = 1, value = Bill
 kvp = updateKeyValue;
 kvp(2, "Steve"); //Output: updateKeyValue: key = 2, value = Steve
-var empObj = {
-    empCode: 6,
-    name: "Bill",
-    gender: "Male",
-};
-console.log(empObj.name + " " + empObj.empCode);
 var Employee = /** @class */ (function () {
     function Employee(code, name) {
         this.salary = 0;
