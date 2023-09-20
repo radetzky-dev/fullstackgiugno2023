@@ -23,19 +23,11 @@ And to total:
 = 5 + 9
 = 14
 */
-
-const tiles: Map<number, string[]> = new Map([
-    [1,  ['A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T']],
-    [2,  ['D', 'G']],
-    [3,  ['B', 'C', 'M', 'P']],
-    [4,  ['F', 'H', 'V', 'W', 'Y']],
-    [5,  ['K']],
-    [8,  ['J', 'X']],
-    [10, ['Q', 'Z']],
-  ])
-
-
-const letterValues: LetterValueType = {
+type LetterValueType = {
+    [key: string]: number;
+  };
+  
+  const letterValues: LetterValueType = {
     a: 1,
     b: 3,
     c: 3,
@@ -63,3 +55,18 @@ const letterValues: LetterValueType = {
     y: 4,
     z: 10,
   }
+  
+  export function score(word?: string): number {
+    if(!word) {
+      return 0;
+    }
+  
+    const letters = word.toLowerCase().split('');
+    let sum = 0;
+    letters.forEach((letter: string) => sum += letterValues[letter]);
+  
+    return sum;
+  }
+
+  console.log (letterValues["b"]);
+  console.log (score("cabbage"));
