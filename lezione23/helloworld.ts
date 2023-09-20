@@ -60,6 +60,21 @@ function circle(diam: number): string {
   
   console.log(circle2(10,5));
 
+  console.log ("***********");
+
+  const add = (a: number, b: number, c?: number | string) => {
+    console.log(c);
+  
+    return a + b;
+  };
+  
+  console.log(add(5, 4, 'I could pass a number, string, or nothing here!'));
+  console.log(add(3, 2));
+
+  const form = document.getElementById('signup-form') as HTMLFormElement;
+  console.log(form.method); // post
+
+
 /*
 Installazione nella cartella
 npm install typescript --save-dev

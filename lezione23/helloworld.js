@@ -35,6 +35,15 @@ var circle2 = function (diam, raggio) {
     return 'Raggio ' + raggio + ' circonferenza è ' + Math.PI * diam;
 };
 console.log(circle2(10, 5));
+console.log("***********");
+var add = function (a, b, c) {
+    console.log(c);
+    return a + b;
+};
+console.log(add(5, 4, 'I could pass a number, string, or nothing here!'));
+console.log(add(3, 2));
+var form = document.getElementById('signup-form');
+console.log(form.method); // post
 /*
 Installazione nella cartella
 npm install typescript --save-dev
