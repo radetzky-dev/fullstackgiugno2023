@@ -38,6 +38,15 @@ class Programmer extends Person {
   }
 
   getLanguages(): void {
+    for (let i = 1; i < 4; i++) {
+      console.log("Block statement execution no." + i);
+    }
+
+    for (let index in this.programmingLanguages) {
+      console.log(index);
+      console.log(this.programmingLanguages[index]); 
+    }
+
     for (let language of this.programmingLanguages) {
       console.log("Programmo in " + language);
     }
@@ -46,7 +55,7 @@ class Programmer extends Person {
 
 const developer = new Programmer("Sergio", true, "sergio@e.com", 1, [
   "javascript",
-  "php",
+  "php", "java", "c#"
 ]);
 
 console.log("My name is " + developer.name);
