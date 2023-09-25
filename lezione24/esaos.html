@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/aos/demo/css/styles.css" />
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+</head>
+
+<body>
+    <div id="transcroller-body" class="aos-all">
+        <div class="aos-item" data-aos="fade-up">
+            <div class="aos-item__inner">
+                <h3>1</h3>
+            </div>
+        </div>
+        <div class="aos-item" data-aos="fade-down">
+            <div class="aos-item__inner">
+                <h3>2</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/aos/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-in-out-sine'
+        });
+    </script>
+</body>
+
+</html>
