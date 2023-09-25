@@ -24,7 +24,11 @@
     </div>
 
     <script src="node_modules/aos/dist/aos.js"></script>
+    <script src="node_modules/time-stamp/index.js"></script>
     <script>
+
+        console.log("Day " + timestamp());
+        console.log("Day in Italy " +timestamp('DD-MM-YYYY'));
         AOS.init({
             easing: 'ease-in-out-sine'
         });
