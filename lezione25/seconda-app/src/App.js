@@ -136,22 +136,21 @@ function App() {
   );
   */
 
-//  root.render(React.createElement(threeColumns, null, null));
+  //  root.render(React.createElement(threeColumns, null, null));
 
-    let myName = "Paolo";
+  let myName = "Paolo";
+  let mySurname = "Rossi";
 
   return (
     <div>
       <h1>Esempio JSX</h1>
       <Welcome name={myName} />
-      <Saluta name="Paolo" surname="Rossi" />
+      <Saluta name="Paolo" surname={mySurname} />
       <hr></hr>
       <GetGreeting name={myName} />
       <NumberList items={myList} />
     </div>
-  )
-
- 
+  );
 }
 
 export default App;
