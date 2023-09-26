@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+/miaprima-app/node_modules
+/miaprima-app
+/miaapp-bootstrap
 # testing
 /coverage
 
