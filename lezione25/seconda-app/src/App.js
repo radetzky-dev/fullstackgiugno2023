@@ -4,6 +4,8 @@ import React from "react";
 
 
 import HelloWorld from "./components/HelloWrold";
+import Orologio from "./components/Orologio";
+import Contatore from "./components/Contatore";
 
 function Populate(myList) {
   return myList.map((i) => <li key={i.toString()}>{i}</li>);
@@ -151,6 +153,8 @@ function App() {
   return (
     <div>
       <h2>Il mio componente</h2>
+      <Orologio></Orologio>
+      <Contatore></Contatore>
       <HelloWorld/>
       <h1>Esempio JSX</h1>
       <Welcome name={myName} />
