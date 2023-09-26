@@ -127,8 +127,8 @@ function App() {
 
   // ReactDOM.render(demo, document.getElementById("root"));
 
-  const root = ReactDOM.createRoot(document.getElementById("root"));
-  // root.render(<NumberList items={myList} />);
+  //const root = ReactDOM.createRoot(document.getElementById("root"));
+  // root.render();
 
   /*
   root.render(
@@ -136,16 +136,22 @@ function App() {
   );
   */
 
-  root.render(React.createElement(threeColumns, null, null));
+//  root.render(React.createElement(threeColumns, null, null));
 
-  const elem = <Welcome name="Paolo" />;
-  root.render(elem, null, null);
+    let myName = "Paolo";
 
-  const elem2 = <Saluta name="Paolo" surname="Rossi" />;
-  root.render(elem2, null, null);
+  return (
+    <div>
+      <h1>Esempio JSX</h1>
+      <Welcome name={myName} />
+      <Saluta name="Paolo" surname="Rossi" />
+      <hr></hr>
+      <GetGreeting name={myName} />
+      <NumberList items={myList} />
+    </div>
+  )
 
-  const elem3 = <GetGreeting name="mario" />;
-  root.render(elem3, null, null);
+ 
 }
 
 export default App;
