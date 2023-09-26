@@ -37,7 +37,18 @@ function Welcome(props) {
 
 function Saluta(props) {
   const surname = props.surname;
-  return <h2>Ciao {props.name} {surname.toUpperCase()}</h2>;
+  return (
+    <h2>
+      Ciao {props.name} {surname.toUpperCase()}
+    </h2>
+  );
+}
+
+function GetGreeting(props) {
+  if (props.name) {
+    return <h1>Hello, {props.name}!</h1>;
+  }
+  return <h1>Hello, Stranger.</h1>;
 }
 
 function NumberList(props) {
@@ -130,9 +141,11 @@ function App() {
   const elem = <Welcome name="Paolo" />;
   root.render(elem, null, null);
 
-
   const elem2 = <Saluta name="Paolo" surname="Rossi" />;
   root.render(elem2, null, null);
+
+  const elem3 = <GetGreeting name="mario" />;
+  root.render(elem3, null, null);
 }
 
 export default App;
