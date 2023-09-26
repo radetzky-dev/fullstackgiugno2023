@@ -46,6 +46,11 @@ function Saluta(props) {
   );
 }
 
+//vedi https://medium.com/@martin.crabtree/react-js-using-children-props-c83d5b259756#:~:text=The%20%7B%20props.,be%20rendered%20by%20the%20child.
+function MyTitle (props) {
+  return <h5>TEST : {props.children}</h5>;
+}
+
 function GetGreeting(props) {
   if (props.name) {
     return <Welcome name={props.name}/>;
@@ -153,6 +158,7 @@ function App() {
       <hr></hr>
       <GetGreeting name={myName} />
       <NumberList items={myList} />
+      <MyTitle> <p>Prova</p> </MyTitle>
     </div>
   );
 }
