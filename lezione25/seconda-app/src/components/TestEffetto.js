@@ -10,7 +10,7 @@ function TestEffetto() {
     if (conteggio > 0) {
       document.body.style.background = "red";
     }
-  });
+  },[conteggio]); //col parametro indico che è collegato a questa variabile
 
   return (
     <div>

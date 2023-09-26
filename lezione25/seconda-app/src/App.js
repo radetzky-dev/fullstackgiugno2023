@@ -42,7 +42,11 @@ function Welcome(props) {
 
 function Saluta(props) {
   const surname = props.surname;
+  const MyContext = React.createContext("prova");
+
+
   return (
+  
     <h2>
       Ciao {props.name} {surname.toUpperCase()}
     </h2>
