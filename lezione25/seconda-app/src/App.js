@@ -31,6 +31,15 @@ function ListItem(props) {
   return <li>{props.value}</li>;
 }
 
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+function Saluta(props) {
+  const surname = props.surname;
+  return <h2>Ciao {props.name} {surname.toUpperCase()}</h2>;
+}
+
 function NumberList(props) {
   console.log(props);
   const numbers = props.items;
@@ -116,9 +125,14 @@ function App() {
   );
   */
 
-
   root.render(React.createElement(threeColumns, null, null));
 
+  const elem = <Welcome name="Paolo" />;
+  root.render(elem, null, null);
+
+
+  const elem2 = <Saluta name="Paolo" surname="Rossi" />;
+  root.render(elem2, null, null);
 }
 
 export default App;
