@@ -6,6 +6,7 @@ import React from "react";
 import HelloWorld from "./components/HelloWrold";
 import Orologio from "./components/Orologio";
 import Contatore from "./components/Contatore";
+import Clicca from "./components/Clicca";
 
 function Populate(myList) {
   return myList.map((i) => <li key={i.toString()}>{i}</li>);
@@ -163,6 +164,7 @@ function App() {
       <GetGreeting name={myName} />
       <NumberList items={myList} />
       <MyTitle> <p>Prova</p> </MyTitle>
+      <Clicca></Clicca>
     </div>
   );
 }
