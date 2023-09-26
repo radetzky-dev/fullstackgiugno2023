@@ -8,9 +8,7 @@ function Populate(myList)
   return myList.map(i => React.createElement("li", null, i));
 }
 
-
 function App() {
-
   let myList = ["aTtività 1","atTività 2","attività 3","attività 4", "attività 5"];
   let myList2 = ["spesa 1","speSa 2","attività 3","attività 4", "attività 5"];
 
