@@ -31,6 +31,24 @@ function App() {
   );
 
   ReactDOM.render(demo, document.getElementById("root"));
+
+  /*
+  const list = React.createElement(
+    "div",
+    null,
+    React.createElement("h1",null,"To do list"),
+    React.createElement(
+      "ul",
+      null,
+      React.createElement("li",null,"attività 1"),
+      React.createElement("li",null,"attività 2"),
+      React.createElement("li",null,"attività 2"),
+      )
+  );
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(list);
+
+  */
 }
 
 export default App;
