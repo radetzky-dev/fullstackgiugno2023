@@ -32,7 +32,7 @@ function ListItem(props) {
 }
 
 function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
+  return <h1>Hello Welcome, {props.name}</h1>;
 }
 
 function Saluta(props) {
@@ -46,7 +46,7 @@ function Saluta(props) {
 
 function GetGreeting(props) {
   if (props.name) {
-    return <h1>Hello, {props.name}!</h1>;
+    return <Welcome name={props.name}/>;
   }
   return <h1>Hello, Stranger.</h1>;
 }
