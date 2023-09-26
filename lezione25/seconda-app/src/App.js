@@ -2,11 +2,11 @@ import "./App.css";
 
 import React from "react";
 
-
 import HelloWorld from "./components/HelloWrold";
 import Orologio from "./components/Orologio";
 import Contatore from "./components/Contatore";
 import Clicca from "./components/Clicca";
+import TestEffetto from "./components/TestEffetto";
 
 function Populate(myList) {
   return myList.map((i) => <li key={i.toString()}>{i}</li>);
@@ -50,13 +50,13 @@ function Saluta(props) {
 }
 
 //vedi https://medium.com/@martin.crabtree/react-js-using-children-props-c83d5b259756#:~:text=The%20%7B%20props.,be%20rendered%20by%20the%20child.
-function MyTitle (props) {
+function MyTitle(props) {
   return <h5>TEST : {props.children}</h5>;
 }
 
 function GetGreeting(props) {
   if (props.name) {
-    return <Welcome name={props.name}/>;
+    return <Welcome name={props.name} />;
   }
   return <h1>Hello, Stranger.</h1>;
 }
@@ -135,19 +135,6 @@ function App() {
     "attività 5",
   ];
 
-  // ReactDOM.render(demo, document.getElementById("root"));
-
-  //const root = ReactDOM.createRoot(document.getElementById("root"));
-  // root.render();
-
-  /*
-  root.render(
-    React.createElement(ingredientList, { items: myIngredients }, null)
-  );
-  */
-
-  //  root.render(React.createElement(threeColumns, null, null));
-
   let myName = "Paolo";
   let mySurname = "Rossi";
 
@@ -156,15 +143,19 @@ function App() {
       <h2>Il mio componente</h2>
       <Orologio></Orologio>
       <Contatore></Contatore>
-      <HelloWorld/>
+      <HelloWorld />
       <h1>Esempio JSX</h1>
       <Welcome name={myName} />
       <Saluta name="Paolo" surname={mySurname} />
       <hr></hr>
       <GetGreeting name={myName} />
       <NumberList items={myList} />
-      <MyTitle> <p>Prova</p> </MyTitle>
+      <MyTitle>
+        {" "}
+        <p>Prova</p>{" "}
+      </MyTitle>
       <Clicca></Clicca>
+      <TestEffetto></TestEffetto>
     </div>
   );
 }
