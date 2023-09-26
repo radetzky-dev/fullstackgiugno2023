@@ -1,7 +1,9 @@
 import "./App.css";
 
 import React from "react";
-import ReactDOM from "react-dom";
+
+
+import HelloWorld from "./components/HelloWrold";
 
 function Populate(myList) {
   return myList.map((i) => <li key={i.toString()}>{i}</li>);
@@ -143,6 +145,8 @@ function App() {
 
   return (
     <div>
+      <h2>Il mio componente</h2>
+      <HelloWorld/>
       <h1>Esempio JSX</h1>
       <Welcome name={myName} />
       <Saluta name="Paolo" surname={mySurname} />
