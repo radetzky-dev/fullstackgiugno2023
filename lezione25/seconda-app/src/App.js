@@ -8,6 +8,7 @@ import Contatore from "./components/Contatore";
 import Clicca from "./components/Clicca";
 import TestEffetto from "./components/TestEffetto";
 import StopWatch from "./components/StopWatch";
+import Delega from "./components/Delega";
 
 function Populate(myList) {
   return myList.map((i) => <li key={i.toString()}>{i}</li>);
@@ -141,6 +142,7 @@ function App() {
   let myName = "Paolo";
   let mySurname = "Rossi";
 
+
   return (
     <div>
       <h2>Il mio componente</h2>
@@ -160,6 +162,7 @@ function App() {
       <Clicca></Clicca>
       <TestEffetto></TestEffetto>
       <StopWatch></StopWatch>
+      <Delega></Delega>
       
     </div>
   );
