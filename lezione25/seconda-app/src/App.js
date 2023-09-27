@@ -7,6 +7,7 @@ import Orologio from "./components/Orologio";
 import Contatore from "./components/Contatore";
 import Clicca from "./components/Clicca";
 import TestEffetto from "./components/TestEffetto";
+import StopWatch from "./components/StopWatch";
 
 function Populate(myList) {
   return myList.map((i) => <li key={i.toString()}>{i}</li>);
@@ -44,9 +45,7 @@ function Saluta(props) {
   const surname = props.surname;
   const MyContext = React.createContext("prova");
 
-
   return (
-  
     <h2>
       Ciao {props.name} {surname.toUpperCase()}
     </h2>
@@ -160,6 +159,8 @@ function App() {
       </MyTitle>
       <Clicca></Clicca>
       <TestEffetto></TestEffetto>
+      <StopWatch></StopWatch>
+      
     </div>
   );
 }
